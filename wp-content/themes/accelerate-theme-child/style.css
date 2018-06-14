@@ -26,7 +26,7 @@ Text Domain:  accelerate-theme-child
 } /* the "background:"" from parent style.css didn't have "none repeat scroll 0 0" it just had the color #333. When I just replaced #333 with #45ac9d it worked fine. */
 .featured-work .site-content{
  display: block;
-} /* flexbox is applied to site-content so had to specify display-block up one level */
+}
 .featured-work .site-content h4 {
   font-size: 16px;
   font-size: .94em;
@@ -86,3 +86,15 @@ Text Domain:  accelerate-theme-child
    margin-bottom: 50px;
    border: 1px solid #dddddd;
  }
+
+/* Case Study Archive */
+.case-study {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.case-study-images {
+  padding-left: 85px;
+}
+.view-project {
+  color: #45ac9d;
+}
