@@ -95,6 +95,10 @@ Text Domain:  accelerate-theme-child
 .case-study-images {
   padding-left: 85px;
 }
+div.case-study-images img {
+	width: 100%;
+	height: auto;
+}
 .view-project {
   color: #45ac9d;
 }
