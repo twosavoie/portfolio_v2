@@ -107,6 +107,7 @@ div.case-study-images img {
 }
 
 /* Footer */
+
 .social-media-menu li {
   margin-right: 10px;
   display: inline-block;
@@ -123,7 +124,7 @@ div.case-study-images img {
   display: block;
 }
 /* Text meant only for screen readers. */
-.screen-reader-text {
+/*.screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -134,7 +135,7 @@ div.case-study-images img {
 	position: absolute !important;
 	width: 1px;
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
+/*}*/
 
 /*Contact page */
 .main-content {
