@@ -10,14 +10,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="about-page about-hero-content">
 		<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 
-
+<!--class="site-content" -->
 
 	</div><!-- #primary -->
 

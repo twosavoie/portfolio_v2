@@ -106,6 +106,27 @@ div.case-study-images img {
   color: #45ac9d;
 }
 
+/* About page */
+/*.page-id-47358 .page-header {
+  max-width: 1200px;
+  width: 100%;
+}*/
+.about-page {
+  background: url("img/death-to-stock-nyc6.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+  height: auto;
+  margin: 0 0 5em;
+  padding: 8em 0;
+  text-align: center;
+}
+.about-hero-content h3 {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 1.4em;
+  font-weight: normal;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
 /* Footer */
 
 .social-media-menu li {
@@ -138,7 +159,7 @@ div.case-study-images img {
 /*}*/
 
 /*Contact page */
-.main-content {
+.page-id-47354 .main-content {
   max-width: 60%;
   margin: 0 auto;
 }
