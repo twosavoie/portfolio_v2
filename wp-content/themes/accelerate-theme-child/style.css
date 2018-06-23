@@ -23,7 +23,7 @@ Text Domain:  accelerate-theme-child
 }
 .button {
 	background: none repeat scroll 0 0 #45ac9d;
-} /* the "background:"" from parent style.css didn't have "none repeat scroll 0 0" it just had the color #333. When I just replaced #333 with #45ac9d it worked fine. */
+}
 .featured-work .site-content{
  display: block;
 }
@@ -76,7 +76,6 @@ Text Domain:  accelerate-theme-child
    width: 314px;
    margin: 0 40px 0 0;
  }
-
  div .case-study-images {
    float: left;
    width: 606px;
@@ -107,10 +106,6 @@ div.case-study-images img {
 }
 
 /* About page */
-/*.page-id-47358 .page-header {
-  max-width: 1200px;
-  width: 100%;
-}*/
 .about-page {
   background: url("img/death-to-stock-nyc6.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
   height: auto;
@@ -137,19 +132,34 @@ div.case-study-images img {
   width: 55%;
 }
 .services-offered {
-
-}
-.services-offered-sidebar {
-  float: left;
-  width: 63%;
+  margin-top: 68px;
+  margin-bottom: 68px;
 }
 .services-offered-images {
   float: left;
 }
+.services-offered-images a img {
+  width: 216px;
+}
+.services-offered-sidebar {
+  width: 65%;
+  margin-left: 5%;
+  float: right;
+}
+.services-offered-sidebar:nth-child(even) {
+  margin: 0;
+  
+}
+.services-offered:nth-child(even) {
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
 
 
 /* Footer */
-
 .social-media-menu li {
   margin-right: 10px;
   display: inline-block;

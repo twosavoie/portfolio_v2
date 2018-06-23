@@ -26,6 +26,7 @@ get_header(); ?>
       <p>We take pride in our clients and the content we create for them. Here's a brief overview of our offered services.</p>
   </div>
 
+//remove permalinks if not creating single pages for posts
   <div id="primary" class="site-content">
 		<div class="main-content" role="main">
       <?php query_posts('posts_per_page=4&post_type=services_offered'); ?>
@@ -34,10 +35,6 @@ get_header(); ?>
       ?>
 
       <article class="services-offered clearfix">
-        <aside class="services-offered-sidebar">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php the_excerpt(); ?>
-        </aside>
         <div class="services-offered-images">
           <a href="<?php the_permalink(); ?>">
             <?php if($icon_1) {
@@ -45,6 +42,11 @@ get_header(); ?>
             } ?>
           </a>
         </div>
+        <aside class="services-offered-sidebar">
+          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <?php the_excerpt(); ?>
+        </aside>
+
       </article>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
