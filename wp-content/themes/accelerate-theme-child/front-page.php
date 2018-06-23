@@ -23,6 +23,7 @@ get_header(); ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
 
+<!-- maybe take away site-content & flex for mobile instead display block -->
 	<section class="featured-work">
 		<div class="site-content">
 			<h4>Featured Work</h4>

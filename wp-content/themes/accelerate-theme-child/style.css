@@ -35,7 +35,7 @@ Text Domain:  accelerate-theme-child
   margin-bottom: 40px;
   margin-bottom: 2.5em;
 }
-.homepage-featured-work-row {
+.homepage-featured-work-row { /*maybe use display: block; for mobile*/
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -123,9 +123,30 @@ div.case-study-images img {
   font-family: 'Open Sans';
   font-size: 1.4em;
   font-weight: normal;
-  max-width: 60%;
+  max-width: 42%;
   margin: 0 auto;
 }
+.services-list {
+  max-width: 76%;
+  margin: 0 auto;
+}
+.about-services {
+  text-align: center;
+}
+.about-services p {
+  width: 55%;
+}
+.services-offered {
+
+}
+.services-offered-sidebar {
+  float: left;
+  width: 63%;
+}
+.services-offered-images {
+  float: left;
+}
+
 
 /* Footer */
 
