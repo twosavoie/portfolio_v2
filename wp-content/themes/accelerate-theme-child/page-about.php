@@ -26,7 +26,7 @@ get_header(); ?>
       <p>We take pride in our clients and the content we create for them. Here's a brief overview of our offered services.</p>
   </div>
 
-//remove permalinks if not creating single pages for posts
+<!-- remove permalinks if not creating single pages for posts -->
   <div id="primary" class="site-content">
 		<div class="main-content" role="main">
       <?php query_posts('posts_per_page=4&post_type=services_offered'); ?>

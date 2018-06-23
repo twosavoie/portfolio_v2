@@ -134,6 +134,7 @@ div.case-study-images img {
 .services-offered {
   margin-top: 68px;
   margin-bottom: 68px;
+  justify-content: space-between;
 }
 .services-offered-images {
   float: left;
@@ -143,12 +144,7 @@ div.case-study-images img {
 }
 .services-offered-sidebar {
   width: 65%;
-  margin-left: 5%;
-  float: right;
-}
-.services-offered-sidebar:nth-child(even) {
-  margin: 0;
-  
+  float: right; 
 }
 .services-offered:nth-child(even) {
   display: -webkit-flex; /* Safari */
