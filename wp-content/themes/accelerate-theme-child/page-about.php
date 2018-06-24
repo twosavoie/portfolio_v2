@@ -54,6 +54,13 @@ get_header(); ?>
 
 </section>
 
+<section class="contact-link-section clearfix" >
+  <div class="cta">
+    <h4>Interested in working with us?</h4>
+    <a class="button" href="http://localhost:8888/accelerate/contact-us/">Contact Us</a>
+  </div>
+</section>
+
 
 
 <?php get_footer(); ?>

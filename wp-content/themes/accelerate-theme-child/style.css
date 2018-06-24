@@ -144,7 +144,7 @@ div.case-study-images img {
 }
 .services-offered-sidebar {
   width: 65%;
-  float: right; 
+  float: right;
 }
 .services-offered:nth-child(even) {
   display: -webkit-flex; /* Safari */
@@ -153,6 +153,35 @@ div.case-study-images img {
   flex-direction: row-reverse;
   align-items: center;
 }
+.contact-link-section {
+  clear: both;
+  margin: 0 auto;
+  max-width: 75%;
+  border-top: 2px solid #ddd;
+}
+.cta {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.cta h4 {
+  float: left;
+  width: 35%;
+  text-transform: none;
+}
+.cta a {
+  /*width: 25%;*/
+  float: left;
+  margin-top: 20px;
+}
+ /*{
+  background: #45ac9d;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+} */
 
 
 /* Footer */
