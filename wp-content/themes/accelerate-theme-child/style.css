@@ -174,15 +174,35 @@ div.case-study-images img {
   float: left;
   margin-top: 20px;
 }
- /*{
-  background: #45ac9d;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-} */
 
+/* 404 page */
+.lost-hero-content {
+  background: url("img/fredrick-kearney-jr-unsplash.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+  height: auto;
+  margin: 0 0 5em;
+  padding: 20em 0;
+/*  text-align: center; /*need?*/
+}
+.lost-header {
+	color: #fff;
+	font-weight:bold;
+	font-size: 2em;
+	line-height: 1.5;
+	margin: 0 2%;
+  margin-bottom: 2em;
+}
+.lost-page a {
+  margin-left: 1.6em;
+}
+.photo-credit {
+  max-width: 76%;
+  margin: 0 auto;
+}
+.photo-credit h4 {
+  font-family: 'Londrina Solid', 'Montserrat', 'Open Sans', Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+}
 
 /* Footer */
 .social-media-menu li {

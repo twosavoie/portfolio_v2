@@ -29,7 +29,7 @@ get_header(); ?>
 <!-- remove permalinks if not creating single pages for posts -->
   <div id="primary" class="site-content">
 		<div class="main-content" role="main">
-      <?php query_posts('posts_per_page=4&post_type=services_offered'); ?>
+      <?php query_posts('posts_per_page()&post_type=services_offered'); ?>
 			<?php while ( have_posts() ) : the_post();
         $icon_1 = get_field("icon_1");
       ?>
@@ -57,10 +57,8 @@ get_header(); ?>
 <section class="contact-link-section clearfix" >
   <div class="cta">
     <h4>Interested in working with us?</h4>
-    <a class="button" href="http://localhost:8888/accelerate/contact-us/">Contact Us</a>
+    <a class="button" href="<?php echo site_url('/contact-us/') ?>">Contact Us</a>
   </div>
 </section>
-
-
 
 <?php get_footer(); ?>
