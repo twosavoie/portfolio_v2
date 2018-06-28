@@ -45,12 +45,14 @@ Text Domain:  accelerate-theme-child
 }
 .recent-posts {
   margin-top: 50px;
+  display: block;
 }
 
 .blog-post {
-    width: 50%;
+    width: 45%;
     float: left;
     margin-bottom: 2em;
+    display: inline-block;
 }
 .blog-post h4 {
   font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
@@ -66,7 +68,35 @@ Text Domain:  accelerate-theme-child
 	color: #45ac9d;
 	text-transform: uppercase;
 }
-
+.twitter-widget {
+  width: 45%;
+  float: left;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+.twitter-widget h4 {
+  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    margin: 2em 0 .5em;
+}
+.twitter-widget h3 {
+  font-size: 1.5em;
+}
+.twitter-widget .follow-us-link {
+  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+	color: #45ac9d;
+	text-transform: uppercase;
+}
+.tweets {
+  margin-left: 0;
+}
+.tweets li {
+  list-style-type: none;
+}
+.stt-em a {
+  display: none;
+}
  /* Case Studies */
  article .case-study{
    margin: 40px 0 0;
@@ -181,7 +211,6 @@ div.case-study-images img {
   height: auto;
   margin: 0 0 5em;
   padding: 20em 0;
-/*  text-align: center; /*need?*/
 }
 .lost-header {
 	color: #fff;
