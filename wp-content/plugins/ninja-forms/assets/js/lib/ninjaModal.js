@@ -37,6 +37,7 @@ function NinjaModal ( data ) {
     this.buttons.secondary = {};
     this.buttons.primary.data = ( 'undefined' != typeof data.btnPrimary ? data.btnPrimary : false );
     this.buttons.secondary.data = ( 'undefined' != typeof data.btnSecondary ? data.btnSecondary : false );
+    this.onOpenCallback = ( 'undefined' != typeof data.onOpenCallback ? data.onOpenCallback : false );
     // See if we need the progress bar.
     this.useProgressBar = ( 'undefined' !=  typeof data.useProgressBar ? data.useProgressBar : false );
     if ( this.useProgressBar ) {
@@ -52,6 +53,14 @@ function NinjaModal ( data ) {
     this.initModal();
     // Show the popup.
     this.toggleModal( true );
+}
+
+
+/**
+ * Function to destory the modal.
+ */
+NinjaModal.prototype.destroy = function () {
+    this.popup.destroy();
 }
 
 
@@ -162,6 +171,10 @@ NinjaModal.prototype.initModal = function () {
                 // Attach the callback.
                 jQuery( this.content ).find( '#nf-button-secondary-' + this.dataId ).click( that.buttons.secondary.callback );
             }
+
+            if ( that.onOpenCallback ) {
+                that.onOpenCallback();
+            }
         },
     } );
     // Setup our data id to keep the DOM ids unique.
@@ -260,6 +273,7 @@ NinjaModal.prototype.renderContent = function () {
             this.buttons.secondary.dom.onclick = this.buttons.secondary.callback;
         }
     }
+    
     // Set our content.
     this.popup.setContent( document.createElement( 'div' ).appendChild( contentBox ).parentElement.innerHTML );
 }

@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
-				<a class="button" href="<?php echo site_url('/case-studies/') ?>">View Our Work</a>
+				<a class="button" href="<?php echo site_url('/case-studies/') ?>">Let's Get Started!</a>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
@@ -50,7 +50,7 @@ get_header(); ?>
 
 
 
-	<section class="recent-posts">
+<!--	<section class="recent-posts">
 		<div class="site-content">
 			<div class="blog-post">
 				<h4>From the Blog</h4>
@@ -72,6 +72,6 @@ get_header(); ?>
 			</div>
 
 		</div>
-	</section>
+	</section>  -->
 
 <?php get_footer(); ?>

@@ -1,9 +1,9 @@
-=== Social Media Share Buttons & Social Sharing Icons ===
+Ôªø=== Social Media Share Buttons & Social Sharing Icons ===
 Contributors: socialdude
 Tags: social media, share, buttons, social widget, icons, share icons, share buttons, sharing icons, sharing buttons, social share, sharing, social sharing
-Requires at least: 2.8
-Tested up to: 4.9.4
-Stable tag: 2.0.1
+Requires at least: 3.5
+Tested up to: 5.2
+Stable tag: 2.2.4
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,7 @@ The social media plugin is very easy to use as it takes you through all the step
 - Step 7: Add a customized pop-up asking people to follow or share (optional)
 - Step 8: Add a subscription form on your site (optional)
 
-In case of issues or questions please ask in the [Support forum] (https://wordpress.org/support/plugin/ultimate-social-media-icons).
+In case of issues or questions please ask in the [Support forum](https://wordpress.org/support/plugin/ultimate-social-media-icons).
 
 We hope you enjoy the free social media plugin! 
 
@@ -65,7 +65,7 @@ We released a Premium Plugin with many more exciting features:
 - **Friendly support** in case you're stuck
 - **Many more settings and options** for your social media network icons
 
-Have a look at the [Premium Plugin features] (https://www.ultimatelysocial.com/usm-premium/)
+Have a look at the [Premium Plugin features](https://www.ultimatelysocial.com/usm-premium/)
 
 
 == Installation ==
@@ -100,14 +100,14 @@ Either de-activate those extensions or try it in a different browser.
 
 If the plugin setting's area looks 'funny' after an upgrade then please clear your cache with String+F5 (PC) or Command+R (Mac).
 
-If you get the error message ìAre you sure you want to do this? / Please try againî when uploading the socialsharing plugin: Some servers may have a low limits with respect to permitted upload times. Please set the values in the ìphp.iniî file to:
+If you get the error message ‚ÄúAre you sure you want to do this? / Please try again‚Äù when uploading the socialsharing plugin: Some servers may have a low limits with respect to permitted upload times. Please set the values in the ‚Äúphp.ini‚Äù file to:
 
 max_execution_time 90
 post_max_size 48M
 
-If you donít know how to do it, please contact your server support / hosting company for that. Tell them you need it for a social sharing plugin on WordPress which may take longer to upload.  
+If you don‚Äôt know how to do it, please contact your server support / hosting company for that. Tell them you need it for a social sharing plugin on WordPress which may take longer to upload.  
 
-If your issue is still not fixed after youíve followed the steps above, we can provide support as part of our share to social Premium Plugin: https://www.ultimatelysocial.com/usm-premium/.
+If your issue is still not fixed after you‚Äôve followed the steps above, we can provide support as part of our share to social Premium Plugin: https://www.ultimatelysocial.com/usm-premium/.
 
 = I get error messages 'Error : 7', 'Error : 56', 'Error : 6' etc. =
 
@@ -274,6 +274,96 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 
 == Changelog ==
+= 2.2.4 =
+* Solved: Unserialized error corrected.
+* Solved: All curl calls to wp_remote.
+
+= 2.2.3 =
+* Solved: Footer Error solved.
+* Solved: Removed most of the html errors.
+* Solved: Less anoying sidebar.
+
+= 2.2.2 =
+* Solved: More icons upadated
+* Solved: Icon backgrounds updated 
+
+= 2.2.1 =
+* Solved: woocomerce conflict resolved
+* Solved: alert in case on conflict.
+* new Feature: More icons for free plugin
+
+= 2.2.0 =
+ * Solved: Critical Security Patch.
+
+= 2.1.9 =
+* Solved: Security Patch.
+
+= 2.1.8 =
+* Solved: security update.
+
+= 2.1.7 =
+* Solved: save button not working.
+
+= 2.1.6 =
+* Solved: compatablity issue with older versions.
+
+= 2.1.5 =
+* Solved: google plus is deprecated
+* Solved: Sf count not shown
+* Solved: Sf subscribe form opens blank page.
+* solved: decreased the manual intervestions of upgradation to premium.
+
+= 2.1.4 =
+* Solved: Changed theme check url to match bloginfo url.
+
+= 2.1.3 =
+* Solved: Email validation for Offline chat.
+* Solved: Premium notification breaking the dashboard structure.
+* Solved: changed option for linkedin count
+* Solved: ajax_object conflict with themes.
+* Solved: new keyword check from page title, page keywords and page description.
+
+= 2.1.2 =
+* Solved: Text optimized
+
+= 2.1.1 =
+* Solved: design changes for chat.
+* Solved: unexpected charactor  "[" error for php version 5.3. 
+
+= 2.1.0 =
+* New Feature: Chat for site admin on our settings page.
+* Solved: removed deprecated jQuery functions.
+* Solved: Rectangle icon alignemnt problem on some themes solved.
+
+= 2.0.9 =
+* Banner for animation section in Question 4 added
+* Different icon for mouseover section pointing in premium in Question 4 added
+* Removed theme icon banner if no match
+
+= 2.0.8 =
+* Solved: Notification bar cannot be seen anymore
+* Solved: cleared the float elements after notice.
+
+= 2.0.7 =
+* Round green follow button doesn't show - fixed
+* Footer optimized
+
+= 2.0.6 =
+* Fixed bug that sometimes banner didn't disappear
+* Links in review message updated 
+
+= 2.0.5 =
+* Issue with click on icons on mobile fixed
+
+= 2.0.4 =
+* Corrected missing ? in shortcode
+
+= 2.0.3 =
+* Optimized texts
+
+= 2.0.2 =
+* Addthis removed due to GDPR
+* New option to switch debugging mode on/off
 
 = 2.0.1 =
 * Issue of window.onscroll function overriding and breaking other plugins/themes fixed
@@ -702,5 +792,5 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 == Upgrade Notice ==
 
-= 2.0.1 =
+= 2.2.4 =
 Please upgrade

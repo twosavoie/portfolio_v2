@@ -9,121 +9,132 @@ function sfsi_frontPopUp () {
 /* check where to be pop-shown */
 function sfsi_check_PopUp($content)
 {
-     global $post; global $wpdb; 
-     $sfsi_section7_options=  unserialize(get_option('sfsi_section7_options',false));
+     global $post; 
+     global $wpdb; 
+
+     $content = '';
+
+     $sfsi_section7_options =  unserialize(get_option('sfsi_section7_options',false));
 	 
-     if($sfsi_section7_options['sfsi_Show_popupOn']=="blogpage")
-     {   
-	   if(!is_feed() && !is_home() && !is_page())
-	   {
-		     $content=  sfsi_frontPopUp ().$content;
-	   }
-     }
-	 else if($sfsi_section7_options['sfsi_Show_popupOn']=="selectedpage")
-     {
-	 	if(!empty($post->ID) && !empty($sfsi_section7_options['sfsi_Show_popupOn_PageIDs']))
-		{
-			if(is_page() && in_array($post->ID,  unserialize($sfsi_section7_options['sfsi_Show_popupOn_PageIDs'])))
-			{
-				$content=  sfsi_frontPopUp ().$content;
-			}
-		}
-     }
-     else if($sfsi_section7_options['sfsi_Show_popupOn']=="everypage")
-	 {
-	 	$content= sfsi_frontPopUp ().$content;
+     if(isset($sfsi_section7_options['sfsi_Show_popupOn']) && !empty($sfsi_section7_options['sfsi_Show_popupOn'])){
+         
+         if($sfsi_section7_options['sfsi_Show_popupOn']=="blogpage")
+         {   
+           if(!is_feed() && !is_home() && !is_page())
+           {
+                 $content=  sfsi_frontPopUp().$content;
+           }
+         }
+         else if($sfsi_section7_options['sfsi_Show_popupOn']=="selectedpage")
+         {
+            if(!empty($post->ID) && !empty($sfsi_section7_options['sfsi_Show_popupOn_PageIDs']))
+            {
+                if(is_page() && in_array($post->ID,  unserialize($sfsi_section7_options['sfsi_Show_popupOn_PageIDs'])))
+                {
+                    $content=  sfsi_frontPopUp().$content;
+                }
+            }
+         }
+         else if($sfsi_section7_options['sfsi_Show_popupOn']=="everypage")
+         {
+            $content= sfsi_frontPopUp().$content;
+         }        
      }
 
      /* check for pop times */
-     if($sfsi_section7_options['sfsi_Shown_pop']=="once")
-     {
-		$time_popUp= (int) $sfsi_section7_options['sfsi_Shown_popupOnceTime'];
-		$time_popUp= $time_popUp*1000;
-		ob_start();
-	 ?>
-     <script>
-	    jQuery( document ).ready(function( $ )
-		{
-	    	setTimeout(function()
-			{
-				jQuery('.sfsi_outr_div').css({'z-index':'1000000',opacity:1});
-				jQuery('.sfsi_outr_div').fadeIn(200);
-				jQuery('.sfsi_FrntInner_chg').fadeIn(200);
-			}
-			,<?php echo $time_popUp; ?>);
-		});
-	 </script>
-     <?php 
-     echo ob_get_clean();
-     return $content;
-     }
-     if($sfsi_section7_options['sfsi_Shown_pop']=="ETscroll")
+     if(isset($sfsi_section7_options['sfsi_Shown_pop']) && !empty($sfsi_section7_options['sfsi_Shown_pop']) && $sfsi_section7_options['sfsi_Shown_pop']=="once")
      {
 		$time_popUp = (int) $sfsi_section7_options['sfsi_Shown_popupOnceTime'];
 		$time_popUp = $time_popUp*1000;
-	    ob_start();
-	     
-         ?>
+		ob_start();
+	 ?>
          <script>
-    	    jQuery( document ).scroll(function( $ )
+    	    jQuery( document ).ready(function( $ )
     		{
-    	    	var y = jQuery(this).scrollTop();
-    	
-              	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-    			{	 
-    			   if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-100)
-    			   {
-    				  jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+"px",position:"absolute"});
-    				  jQuery('.sfsi_outr_div').fadeIn(200);
-    				  jQuery('.sfsi_FrntInner_chg').fadeIn(200);
-    			   }
-    			   else{
-    				   jQuery('.sfsi_outr_div').fadeOut();
-    				   jQuery('.sfsi_FrntInner_chg').fadeOut();
-    			   }
-    		  }
-    		  else
-    		  {
-    			   if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-3)
-    			   {
-    					jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+200+"px",position:"absolute"});
-    					jQuery('.sfsi_outr_div').fadeIn(200);
-    					jQuery('.sfsi_FrntInner_chg').fadeIn(200);
-    		  	   }
-    	 		   else
-    			   {
-    				 jQuery('.sfsi_outr_div').fadeOut();
-    				 jQuery('.sfsi_FrntInner_chg').fadeOut();
-    			   }
-    	 	  } 
+    	    	setTimeout(function()
+    			{
+    				jQuery('.sfsi_outr_div').css({'z-index':'1000000',opacity:1});
+    				jQuery('.sfsi_outr_div').fadeIn(200);
+    				jQuery('.sfsi_FrntInner_chg').fadeIn(200);
+    			}
+    			,<?php echo $time_popUp; ?>);
     		});
-         </script>
-        <?php 
+    	 </script>
+     <?php 
         echo ob_get_clean();
-     }
-     if($sfsi_section7_options['sfsi_Shown_pop']=="LimitPopUp")
-     {
-		$time_popUp   = (int) $sfsi_section7_options['sfsi_Shown_popuplimitPerUserTime'];
-		$end_time     = (int) $_COOKIE['sfsi_socialPopUp'] + ($time_popUp*60); 
-		$time_popUp   = $time_popUp*1000;
-     
-	 if(!empty($end_time))
-	 {
-	 	if($end_time<time())
-		{     
-		 ?>
-		 <script>
-			jQuery( document ).ready(function( $ ) {
-			//jQuery('.sfsi_outr_div').fadeIn();
-			sfsi_setCookie('sfsi_socialPopUp',<?php echo time(); ?>,32);
-			setTimeout(function(){jQuery('.sfsi_outr_div').css({'z-index':'1000000',opacity:1});jQuery('.sfsi_outr_div').fadeIn();},<?php echo $time_popUp;?>);
-			});
-		 </script>
-		 <?php
-		 }
-     }
-     echo ob_get_clean();
-     }    
+        return $content;
+    }
+    
+    if(isset($sfsi_section7_options['sfsi_Shown_pop']) && !empty($sfsi_section7_options['sfsi_Shown_pop'])){
+
+         if($sfsi_section7_options['sfsi_Shown_pop']=="ETscroll")
+         {
+            $time_popUp = (int) $sfsi_section7_options['sfsi_Shown_popupOnceTime'];
+            $time_popUp = $time_popUp*1000;
+            ob_start();
+             
+             ?>
+             <script>
+                jQuery( document ).scroll(function( $ )
+                {
+                    var y = jQuery(this).scrollTop();
+            
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+                    {    
+                       if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-100)
+                       {
+                          jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+"px",position:"absolute"});
+                          jQuery('.sfsi_outr_div').fadeIn(200);
+                          jQuery('.sfsi_FrntInner_chg').fadeIn(200);
+                       }
+                       else{
+                           jQuery('.sfsi_outr_div').fadeOut();
+                           jQuery('.sfsi_FrntInner_chg').fadeOut();
+                       }
+                  }
+                  else
+                  {
+                       if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-3)
+                       {
+                            jQuery('.sfsi_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+200+"px",position:"absolute"});
+                            jQuery('.sfsi_outr_div').fadeIn(200);
+                            jQuery('.sfsi_FrntInner_chg').fadeIn(200);
+                       }
+                       else
+                       {
+                         jQuery('.sfsi_outr_div').fadeOut();
+                         jQuery('.sfsi_FrntInner_chg').fadeOut();
+                       }
+                  } 
+                });
+             </script>
+            <?php 
+            echo ob_get_clean();
+         }
+         if($sfsi_section7_options['sfsi_Shown_pop']=="LimitPopUp")
+         {
+            $time_popUp   = (int) $sfsi_section7_options['sfsi_Shown_popuplimitPerUserTime'];
+            $end_time     = (int) $_COOKIE['sfsi_socialPopUp'] + ($time_popUp*60); 
+            $time_popUp   = $time_popUp*1000;
+         
+             if(!empty($end_time))
+             {
+                if($end_time<time())
+                {     
+                 ?>
+                 <script>
+                    jQuery( document ).ready(function( $ ) {
+                    //jQuery('.sfsi_outr_div').fadeIn();
+                    sfsi_setCookie('sfsi_socialPopUp',<?php echo time(); ?>,32);
+                    setTimeout(function(){jQuery('.sfsi_outr_div').css({'z-index':'1000000',opacity:1});jQuery('.sfsi_outr_div').fadeIn();},<?php echo $time_popUp;?>);
+                    });
+                 </script>
+                 <?php
+                 }
+             }
+            echo ob_get_clean();
+         }  
+    }  
 	return $content;
 }
 /* make front end pop div */
@@ -133,7 +144,7 @@ function sfsi_FrontPopupDiv()
     /* get all settings for icons saved in admin */
     $sfsi_section1_options=  unserialize(get_option('sfsi_section1_options',false));
     $custom_i=unserialize($sfsi_section1_options['sfsi_custom_files']);
-    if($sfsi_section1_options['sfsi_rss_display']=='no' &&  $sfsi_section1_options['sfsi_email_display']=='no' && $sfsi_section1_options['sfsi_facebook_display']=='no' && $sfsi_section1_options['sfsi_twitter_display']=='no' &&  $sfsi_section1_options['sfsi_google_display']=='no' && $sfsi_section1_options['sfsi_share_display']=='no' && $sfsi_section1_options['sfsi_youtube_display']=='no' && $sfsi_section1_options['sfsi_pinterest_display']=='no' && $sfsi_section1_options['sfsi_linkedin_display']=='no' && empty($custom_i)) 
+    if($sfsi_section1_options['sfsi_rss_display']=='no' &&  $sfsi_section1_options['sfsi_email_display']=='no' && $sfsi_section1_options['sfsi_facebook_display']=='no' && $sfsi_section1_options['sfsi_twitter_display']=='no' &&  $sfsi_section1_options['sfsi_google_display']=='no' && $sfsi_section1_options['sfsi_youtube_display']=='no' && $sfsi_section1_options['sfsi_pinterest_display']=='no' && $sfsi_section1_options['sfsi_linkedin_display']=='no' && empty($custom_i)) 
     {
      $icons='';return $icons;exit;
     }
@@ -164,18 +175,23 @@ function sfsi_FrontPopupDiv()
                      $sfsi_section5['sfsi_facebookIcon_order']=>'facebook',
                      $sfsi_section5['sfsi_googleIcon_order']=>'google',
                      $sfsi_section5['sfsi_twitterIcon_order']=>'twitter',
-                     $sfsi_section5['sfsi_shareIcon_order']=>'share',
                      $sfsi_section5['sfsi_youtubeIcon_order']=>'youtube',
                      $sfsi_section5['sfsi_pinterestIcon_order']=>'pinterest',
                      $sfsi_section5['sfsi_linkedinIcon_order']=>'linkedin',
-		     $sfsi_section5['sfsi_instagramIcon_order']=>'instagram',
+                     $sfsi_section5['sfsi_instagramIcon_order']=>'instagram',
+		             $sfsi_section5['sfsi_telegramIcon_order']=>'telegram',
+		             $sfsi_section5['sfsi_vkIcon_order']=>'vk',
+		             $sfsi_section5['sfsi_okIcon_order']=>'ok',
+		             $sfsi_section5['sfsi_weiboIcon_order']=>'weibo',
+		             $sfsi_section5['sfsi_wechatIcon_order']=>'wechat',
+                     
                     ) ;
   $icons=array();
   $elements=array();
   $icons=  unserialize($sfsi_section1_options['sfsi_custom_files']);
   if(is_array($icons))  $elements=array_keys($icons);
   $cnt=0;
-  $total=count($custom_icons_order);
+  $total=isset($custom_icons_order) && is_array($custom_icons_order)? count($custom_icons_order):0;
   if(!empty($icons) && is_array($icons)) :
   foreach($icons as $cn=>$c_icons)
   {    
@@ -199,7 +215,7 @@ function sfsi_FrontPopupDiv()
     ksort($icons_order);     /* short icons in order to display */
     $icons='<div class="sfsi_outr_div" > <div class="sfsi_FrntInner_chg" style="'.$style.'">';
 	//adding close button
-	$icons.='<div class="sfsiclpupwpr" onclick="sfsihidemepopup();"><img src="'.SFSI_PLUGURL.'images/close.png" /></div>';
+	$icons.='<div class="sfsiclpupwpr" onclick="sfsihidemepopup();"><img src="'.SFSI_PLUGURL.'images/close.png" alt="error" /></div>';
 	
 	 if(!empty($heading_text))
 	 {
@@ -227,8 +243,6 @@ function sfsi_FrontPopupDiv()
     break;
     case 'twitter' :  if($sfsi_section1_options['sfsi_twitter_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('twitter',1)."</li>"; 
     break;
-    case 'share' :  if($sfsi_section1_options['sfsi_share_display']=='yes')    $icons.= "<li id='SFshareIcon'>".sfsi_prepairIcons('share',1)."</li>";                                                                                                                                                                                                    
-    break;
     case 'youtube' :  if($sfsi_section1_options['sfsi_youtube_display']=='yes')     $icons.= "<li>".sfsi_prepairIcons('youtube',1)."</li>"; 
     break;
     case 'pinterest' :   if($sfsi_section1_options['sfsi_pinterest_display']=='yes')     $icons.= "<li>".sfsi_prepairIcons('pinterest',1)."</li>";
@@ -236,6 +250,16 @@ function sfsi_FrontPopupDiv()
     case 'linkedin' :  if($sfsi_section1_options['sfsi_linkedin_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('linkedin',1)."</li>"; 
     break;
     case 'instagram' :  if($sfsi_section1_options['sfsi_instagram_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('instagram',1)."</li>"; 
+    break;
+    case 'telegram' :  if($sfsi_section1_options['sfsi_telegram_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('telegram',1)."</li>"; 
+    break;
+    case 'vk' :  if($sfsi_section1_options['sfsi_vk_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('vk',1)."</li>"; 
+    break;
+    case 'ok' :  if($sfsi_section1_options['sfsi_ok_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('ok',1)."</li>"; 
+    break;
+    case 'weibo' :  if($sfsi_section1_options['sfsi_weibo_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('weibo',1)."</li>"; 
+    break;
+    case 'wechat' :  if($sfsi_section1_options['sfsi_wechat_display']=='yes')    $icons.= "<li>".sfsi_prepairIcons('wechat',1)."</li>"; 
     break;
     case 'custom' : $icons.= "<li>". sfsi_prepairIcons($icon_arry['ele'],1)."</li>"; 
     break;    

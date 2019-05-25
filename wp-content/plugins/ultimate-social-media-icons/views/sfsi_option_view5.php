@@ -3,18 +3,39 @@
 	$icons 		= ($option1['sfsi_custom_files']) ? unserialize($option1['sfsi_custom_files']) : array() ;
 	$option3	= unserialize(get_option('sfsi_section3_options',false));
 	$option5	= unserialize(get_option('sfsi_section5_options',false));
+
 	$custom_icons_order = unserialize($option5['sfsi_CustomIcons_order']);
+	if(!isset($option5['sfsi_telegramIcon_order'])){                     
+        $option5['sfsi_telegramIcon_order']    = '11';
+    }
+    if(!isset($option5['sfsi_vkIcon_order'])){                     
+        $option5['sfsi_vkIcon_order']    = '12';
+    }
+    if(!isset($option5['sfsi_okIcon_order'])){                     
+        $option5['sfsi_okIcon_order']    = '13';
+    }
+    if(!isset($option5['sfsi_weiboIcon_order'])){                     
+        $option5['sfsi_weiboIcon_order']    = '14';
+    }
+    if(!isset($option5['sfsi_wechatIcon_order'])){                     
+        $option5['sfsi_wechatIcon_order']    = '15';
+    }
 	$icons_order = array(
 		$option5['sfsi_rssIcon_order']		=> 'rss',
 		$option5['sfsi_emailIcon_order']	=> 'email',
 		$option5['sfsi_facebookIcon_order']	=> 'facebook',
 		$option5['sfsi_googleIcon_order']	=> 'google',
 		$option5['sfsi_twitterIcon_order']	=> 'twitter',
-		$option5['sfsi_shareIcon_order']	=> 'share',
 		$option5['sfsi_youtubeIcon_order']	=> 'youtube',
 		$option5['sfsi_pinterestIcon_order']=> 'pinterest',
 		$option5['sfsi_linkedinIcon_order']	=> 'linkedin',
-		$option5['sfsi_instagramIcon_order']=> 'instagram'
+		$option5['sfsi_instagramIcon_order']=> 'instagram',
+		$option5['sfsi_telegramIcon_order']=> 'telegram',
+		$option5['sfsi_vkIcon_order']=> 'vk',
+		$option5['sfsi_okIcon_order']=> 'ok',
+		$option5['sfsi_weiboIcon_order']=> 'weibo',
+		$option5['sfsi_wechatIcon_order']=> 'wechat',
+
 	) ;
 	
 	/*
@@ -34,28 +55,7 @@
 														: '';
 	$option5['sfsi_icons_ClickPageOpen']		= 	(isset($option5['sfsi_icons_ClickPageOpen']))
 														? sanitize_text_field($option5['sfsi_icons_ClickPageOpen'])
-														:'';
-	// $option5['sfsi_icons_float'] 				= 	(isset($option5['sfsi_icons_float']))
-	// 													? sanitize_text_field($option5['sfsi_icons_float'])
-	// 													: '';
-	// $option5['sfsi_disable_floaticons'] 		= 	(isset($option5['sfsi_disable_floaticons']))
-	// 													? sanitize_text_field($option5['sfsi_disable_floaticons'])
-	// 													: '';
-	// $option5['sfsi_icons_floatPosition'] 		= 	(isset($option5['sfsi_icons_floatPosition']))
-	// 													? sanitize_text_field($option5['sfsi_icons_floatPosition'])
-	// 													:'';
-	// $option5['sfsi_icons_floatMargin_top'] 		= 	(isset($option5['sfsi_icons_floatMargin_top']))
-	// 													? intval($option5['sfsi_icons_floatMargin_top'])
-	// 													: '';
-	// $option5['sfsi_icons_floatMargin_bottom']	= 	(isset($option5['sfsi_icons_floatMargin_bottom']))
-	// 													? intval($option5['sfsi_icons_floatMargin_bottom'])
-	// 													: '';
-	// $option5['sfsi_icons_floatMargin_left']		= 	(isset($option5['sfsi_icons_floatMargin_left']))
-	// 													? intval($option5['sfsi_icons_floatMargin_left'])
-	// 													: '';
-	// $option5['sfsi_icons_floatMargin_right']	= 	(isset($option5['sfsi_icons_floatMargin_right']))
-	// 													? intval($option5['sfsi_icons_floatMargin_right']): '';
-	
+														:'';	
 	$option5['sfsi_icons_stick'] 				= 	(isset($option5['sfsi_icons_stick']))
 														? sanitize_text_field($option5['sfsi_icons_stick'])
 														: '';
@@ -83,13 +83,27 @@
 	$option5['sfsi_youtube_MouseOverText'] 		= 	(isset($option5['sfsi_youtube_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_youtube_MouseOverText'])
 														: '';
-	$option5['sfsi_share_MouseOverText'] 		= 	(isset($option5['sfsi_share_MouseOverText']))
-														? sanitize_text_field($option5['sfsi_share_MouseOverText'])
-														: '';
 	$option5['sfsi_instagram_MouseOverText']	= 	(isset($option5['sfsi_instagram_MouseOverText']))
 														? sanitize_text_field($option5['sfsi_instagram_MouseOverText'])
 														: '';
-	
+	$option5['sfsi_telegram_MouseOverText']		= 	(isset($option5['sfsi_telegram_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_telegram_MouseOverText'])
+														: '';
+	$option5['sfsi_vk_MouseOverText']			= 	(isset($option5['sfsi_vk_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_vk_MouseOverText'])
+														: '';
+	$option5['sfsi_ok_MouseOverText']			= 	(isset($option5['sfsi_ok_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_ok_MouseOverText'])
+														: '';
+	$option5['sfsi_weibo_MouseOverText']		= 	(isset($option5['sfsi_weibo_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_weibo_MouseOverText'])
+														: '';
+	$option5['sfsi_wechat_MouseOverText']		= 	(isset($option5['sfsi_wechat_MouseOverText']))
+														? sanitize_text_field($option5['sfsi_wechat_MouseOverText'])
+														: '';
+	$sfsi_icons_suppress_errors 				=   (isset($option5['sfsi_icons_suppress_errors']))
+														? sanitize_text_field($option5['sfsi_icons_suppress_errors'])
+														: 'no';
 	if(is_array($custom_icons_order) ) 
 	{
 		foreach($custom_icons_order as $data)
@@ -105,10 +119,10 @@
 	<h4>Order of your icons</h4>
     <!-- icon drag drop  section start here -->	
     <ul class="share_icon_order" >
-            <?php 
+        <?php 
 	 	$ctn = 0;
 	 	foreach($icons_order as $index=>$icn) :
-          
+
 		  switch ($icn) : 
           case 'rss' :?>
             	 <li class="rss_section" data-index="<?php echo $index; ?>" id="sfsi_rssIcon_order">
@@ -140,12 +154,6 @@
                 </li>
           <?php break; ?>
           
-          <?php case 'share' : ?>
-          		<li class="share_section " data-index="<?php echo $index; ?>"  id="sfsi_shareIcon_order">
-                	<a href="#" title="Share" ><img src="<?php echo SFSI_PLUGURL; ?>images/share.png" alt="Share" /></a>
-                </li>
-          <?php break; ?>
-          
           <?php case 'youtube' :?>
           		<li class="youtube_section " data-index="<?php echo $index; ?>" id="sfsi_youtubeIcon_order">
                 	<a href="#" title="YouTube" ><img src="<?php echo SFSI_PLUGURL; ?>images/youtube.png" alt="YouTube" /></a>
@@ -168,7 +176,39 @@
           		<li class="instagram_section " data-index="<?php echo $index; ?>" id="sfsi_instagramIcon_order">
                 	<a href="#" title="Instagram" ><img src="<?php echo SFSI_PLUGURL; ?>images/instagram.png" alt="Instagram" /></a>
                 </li>
-          <?php break; ?>
+		  <?php break; ?>
+		  
+		  <?php case 'telegram' :?>
+          		<li class="telegram_section " data-index="<?php echo $index; ?>" id="sfsi_telegramIcon_order">
+                	<a href="#" title="telegram" ><img src="<?php echo SFSI_PLUGURL; ?>images/icons_theme/default/default_telegram.png" height="54px;" alt="telegram" /></a>
+                </li>
+		  <?php break; ?>
+		  
+		  <?php case 'vk' :?>
+          		<li class="vk_section " data-index="<?php echo $index; ?>" id="sfsi_vkIcon_order">
+                	<a href="#" title="vk" ><img src="<?php echo SFSI_PLUGURL; ?>images/icons_theme/default/default_vk.png" height="54px;" alt="vk" /></a>
+                </li>
+		  <?php break; ?>
+		  
+		  <?php case 'ok' :?>
+          		<li class="ok_section " data-index="<?php echo $index; ?>" id="sfsi_okIcon_order">
+                	<a href="#" title="ok" ><img src="<?php echo SFSI_PLUGURL; ?>images/icons_theme/default/default_ok.png" height="54px;" alt="ok" /></a>
+                </li>
+		  <?php break; ?>
+		  
+		  <?php case 'weibo' :?>
+          		<li class="weibo_section " data-index="<?php echo $index; ?>" id="sfsi_weiboIcon_order">
+                	<a href="#" title="weibo" ><img src="<?php echo SFSI_PLUGURL; ?>images/icons_theme/default/default_weibo.png" height="54px;" alt="weibo" /></a>
+                </li>
+		  <?php break; ?>
+
+		  <?php case 'wechat' :?>
+          		<li class="wechat_section " data-index="<?php echo $index; ?>" id="sfsi_wechatIcon_order">
+                	<a href="#" title="wechat" ><img src="<?php echo SFSI_PLUGURL; ?>images/icons_theme/default/default_wechat.png" height="54px;" alt="wechat" /></a>
+                </li>
+		  <?php break; ?>
+          
+
           
           <?php default   :?>
           		<?php if(isset($icons[$icn['ele']]) && !empty($icons[$icn['ele']]) && filter_var($icons[$icn['ele']], FILTER_VALIDATE_URL) ): ?>
@@ -189,7 +229,7 @@
 	<div class="icons_size"><span>Size:</span><input name="sfsi_icons_size" value="<?php echo ($option5['sfsi_icons_size']!='') ?  $option5['sfsi_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_icons_spacing" type="text" value="<?php echo ($option5['sfsi_icons_spacing']!='') ?  $option5['sfsi_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
 
     <div class="icons_prem_disc">
-        <p class="sfsi_prem_plu_desc"><b>New: </b>The Premium Plugin also allows you to define the vertical distance between the icons (and set this differently for mobile vs. desktop): <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_spacings&utm_medium=banner" target="_blank">Check it out</a></p>
+        <p class="sfsi_prem_plu_desc"><b>New: </b>The Premium Plugin also allows you to define the vertical distance between the icons (and set this differently for mobile vs. desktop): <a  class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"  style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold" class="sfisi_font_bold" target="_blank">Go premium now.<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_spacings&utm_medium=banner" class="sfsi_font_inherit" style="color: #12a252 !important" target="_blank"> or learn more.</a>
     </div>
     
     </div>
@@ -216,74 +256,35 @@
 	</div>
 
     <div class= "sfsi_new_prmium_follw" style="margin-top: 38px;">
-		<p><b>New: </b>The Premium Plugin gives several more alignment options: <br>- &nbsp;&nbsp; Show icons vertically<br>- &nbsp;&nbsp; Align icons within a widget (left, right, centered)<br>- &nbsp;&nbsp; Align icons within the «container» where you place them via shortcode (left, right, centered) <br><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_alignment_options&utm_medium=banner" target="_blank">See all features</a></p>
+		<p><b>New: </b>The Premium Plugin gives several more alignment options: <br>- &nbsp;&nbsp; Show icons vertically<br>- &nbsp;&nbsp; Align icons within a widget (left, right, centered)<br>- &nbsp;&nbsp; Align icons within the «container» where you place them via shortcode (left, right, centered) <br><a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"  class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_alignment_options&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
 	</div>
 
     </div>
     
     <div class="row new_wind">
-	<h4>New window</h4>
-	<div class="row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
-	<ul class="enough_waffling">
-	    <li><input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-	<li><input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" /><label>No</label></li>
-      </ul></div>
+		<h4>New window</h4>
+		<div class="row_onl"><p>If user clicks on your icons, do you want to open the page in a new window?</p>
+			<ul class="enough_waffling">
+		    	<li>
+		    		<input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+		    		<label>Yes</label>
+		    	</li>
+				<li>
+					<input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
+					<label>No</label>
+				</li>
+	      	</ul>
+      	</div>
     </div>
-   <!-- END icon's size and spacing section -->
+
    
      <!-- icon's floating and stick section start here -->	
     <div class="row sticking">
 	
 	<h4>Sticky icons</h4>
 	
-<!-- 	<div class="space">
-	
-		<p class="list">Make icons float?</p>	
-		<ul class="enough_waffling">
-		    <li><input name="sfsi_icons_float" <?php //echo ($option5['sfsi_icons_float']=='yes') ?  'checked="true"' : '' ;?>  type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-		    <li><input name="sfsi_icons_float" <?php //echo ($option5['sfsi_icons_float']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
-		</ul>
-
-    </div> -->
-
     <div class="clear float_options" <?php if($option5['sfsi_icons_stick']=='yes') :?> style="display:none" <?php endif;?>>
-    <!--<div class="clear float_options" <?php //if($option5['sfsi_icons_stick']=='yes' || $option5['sfsi_icons_float']=='no') :?> style="display:none" <?php //endif;?>>-->
 
-<!-- 		<div style="width: 100%; float: left;">
-	        <div class="float">Where shall they float?</div>
-	        <div class="field " >
-	            <select name="sfsi_icons_floatPosition" id="sfsi_icons_floatPosition" class="styled">
-	            <option value="top-left" <?php //echo ($option5['sfsi_icons_floatPosition']=='top-left') ?  'selected="selected"' : '' ;?> >Top - Left</option>
-	            <option value="top-right" <?php //echo ($option5['sfsi_icons_floatPosition']=='top-right') ?  'selected="selected"' : '' ;?> >Top - Right</option>
-	            <option value="center-left" <?php //echo ($option5['sfsi_icons_floatPosition']=='center-left') ?  'selected="selected"' : '' ;?> >Center - Left</option>
-	            <option value="center-right" <?php //echo ($option5['sfsi_icons_floatPosition']=='center-right') ?  'selected="selected"' : '' ;?> >Center - Right</option>
-	            <option value="bottom-left" <?php //echo ($option5['sfsi_icons_floatPosition']=='bottom-left') ?  'selected="selected"' : '' ;?> >Bottom - Left</option>
-	            <option value="bottom-right" <?php //echo ($option5['sfsi_icons_floatPosition']=='bottom-right') ?  'selected="selected"' : '' ;?> >Bottom - Right</option>
-	            </select>
-	        </div>
-	    </div> -->
-
-<!-- 	    <div style="width: 88%; float: left; margin:25px 0 0 187px">
-	    	<h4>Margin From :</h4>
-	        <ul class="sfsi_floaticon_margin_sec">
-	        	<li>
-	            	<label>Top :</label>
-	                <input name="sfsi_icons_floatMargin_top" type="text" value="<?php //echo ($option5['sfsi_icons_floatMargin_top']!='') ?  $option5['sfsi_icons_floatMargin_top'] : '' ;?>" /><ins>Pixels</ins>
-	            </li>
-	            <li>
-	            	<label>Bottom :</label>
-	                <input name="sfsi_icons_floatMargin_bottom" type="text" value="<?php //echo ($option5['sfsi_icons_floatMargin_bottom'] != '') ?  $option5['sfsi_icons_floatMargin_bottom'] : '' ;?>" /><ins>Pixels</ins>
-	            </li>
-	            <li>
-	            	<label>Left :</label>
-	                <input name="sfsi_icons_floatMargin_left" type="text" value="<?php //echo ($option5['sfsi_icons_floatMargin_left']!='') ?  $option5['sfsi_icons_floatMargin_left'] : '' ;?>" /><ins>Pixels</ins>
-	            </li>
-	            <li>
-	            	<label>Right :</label>
-	                <input name="sfsi_icons_floatMargin_right" type="text" value="<?php //echo ($option5['sfsi_icons_floatMargin_right']!='') ?  $option5['sfsi_icons_floatMargin_right'] : '' ;?>" /><ins>Pixels</ins>
-	            </li>
-	        </ul>
-	    </div> -->
   
   	</div> 
   
@@ -314,19 +315,10 @@
 
   </div>
   
-  <!--disable float icons-->
-<!--   <div class="space disblfltonmbl">
-    <p class="list">Disable float icons on mobile devices</p>	
-    <ul class="enough_waffling">
-    <li><input name="sfsi_disable_floaticons" <?php //echo ($option5['sfsi_disable_floaticons']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  /><label>Yes</label></li>
-	<li><input name="sfsi_disable_floaticons" <?php //echo ($option5['sfsi_disable_floaticons']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" /><label>No</label></li>
-  </ul>
-  </div> -->
-  <!--disable float icons-->
 
 </div><!-- END icon's floating and stick section -->
 
-<!--*******************************************************  Sharing texts & pictures section STARTS *********************************************************************-->
+<!--*************  Sharing texts & pictures section STARTS *****************************-->
 
 <div class="row sfsi_custom_social_data_setting" id="custom_social_data_setting">
 
@@ -365,12 +357,12 @@
  		</div>
 
 		<div class="sfsi_new_prmium_follw sfsi_social_sharing" style="margin-bottom: 15px;">
-			<p>Note: This feature is currently only available in the Premium Plugin. <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner" target="_blank">See all features</a>
+			<p>Note: This feature is currently only available in the Premium Plugin. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"  class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a>
 			</p>
 		</div> 		
 </div>
 
-<!--*******************************************************  Sharing texts & pictures section CLOSES *********************************************************************-->
+<!--********************  Sharing texts & pictures section CLOSES ************************************************-->
 
  <!-- mouse over text section start here -->
  <div class="row mouse_txt">
@@ -420,16 +412,34 @@ here what text will be displayed if a user moves his mouse over the icon:
 		</div>
 		<div class="clear">
 		    <div class="mouseover_field instagram_section">
-			<label>Instagram:</label>
-			<input name="sfsi_instagram_MouseOverText" value="<?php echo ($option5['sfsi_instagram_MouseOverText']!='') ?  $option5['sfsi_instagram_MouseOverText'] : '' ;?>" type="text" />
+				<label>Instagram:</label>
+				<input name="sfsi_instagram_MouseOverText" value="<?php echo ($option5['sfsi_instagram_MouseOverText']!='') ?  $option5['sfsi_instagram_MouseOverText'] : '' ;?>" type="text" />
+			</div>
+			<div class="mouseover_field telegram_section">
+				<label>Telegram:</label>
+				<input name="sfsi_telegram_MouseOverText" value="<?php echo ($option5['sfsi_telegram_MouseOverText']!='') ?  $option5['sfsi_telegram_MouseOverText'] : '' ;?>" type="text" />
 		    </div>
 		</div>
-		<!--<div class="clear">
-		<div class="mouseover_field share_section">
-			<label>Share:</label>
-			<input name="sfsi_share_MouseOverText" value="<?php //echo ($option5['sfsi_share_MouseOverText']!='') ?  $option5['sfsi_share_MouseOverText'] : '' ;?>" type="text" />
+		<div class="clear">
+		    <div class="mouseover_field vk_section">
+				<label>VK:</label>
+				<input name="sfsi_vk_MouseOverText" value="<?php echo ($option5['sfsi_vk_MouseOverText']!='') ?  $option5['sfsi_vk_MouseOverText'] : '' ;?>" type="text" />
+			</div>
+			<div class="mouseover_field ok_section">
+				<label>Ok:</label>
+				<input name="sfsi_ok_MouseOverText" value="<?php echo ($option5['sfsi_ok_MouseOverText']!='') ?  $option5['sfsi_ok_MouseOverText'] : '' ;?>" type="text" />
+		    </div>
 		</div>
-		</div> -->
+		<div class="clear">
+		    <div class="mouseover_field weibo_section">
+				<label>Weibo:</label>
+				<input name="sfsi_weibo_MouseOverText" value="<?php echo ($option5['sfsi_weibo_MouseOverText']!='') ?  $option5['sfsi_weibo_MouseOverText'] : '' ;?>" type="text" />
+			</div>
+			<div class="mouseover_field wechat_section">
+				<label>WeChat:</label>
+				<input name="sfsi_wechat_MouseOverText" value="<?php echo ($option5['sfsi_wechat_MouseOverText']!='') ?  $option5['sfsi_wechat_MouseOverText'] : '' ;?>" type="text" />
+		    </div>
+		</div>
         <div class="clear"> </div>  
 		<div class="custom_m">
         	<?php 
@@ -454,6 +464,22 @@ here what text will be displayed if a user moves his mouse over the icon:
 
 	</div>
 	<!-- END mouse over text section -->
+
+    <div class="row new_wind">
+		<h4>Error reporting</h4>
+		<div class="row_onl"><p>Suppress error messages?</p>
+			<ul class="enough_waffling">
+		    	<li>
+		    		<input name="sfsi_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+		    		<label>Yes</label>
+		    	</li>
+				<li>
+					<input name="sfsi_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
+					<label>No</label>
+				</li>
+	      	</ul>
+      	</div>
+    </div>
 
 	<?php sfsi_ask_for_help(5); ?>
 

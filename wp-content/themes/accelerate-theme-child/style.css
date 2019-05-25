@@ -2,27 +2,49 @@
 Theme Name:   Accelerate Theme Child
 Theme URI:    http://example.com/accelerate-theme-child/
 Description:  Accelerate Child Theme - Accelerate
-Author:   	Your Name!
-Author URI:   http://example.com
+Author:   	Lisa Savoie
+Author URI:   http://lscodes.com
 Template: 	accelerate-theme
 Version:      2.0.0
 Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  accelerate-theme-child
 */
 
+
 /* Homepage styles */
 .home-page {
-    background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+/*  background: url("img/domenico-loia-310197-unsplash.jpeg") no-repeat scroll  right center / cover rgba(0, 0, 0, 0); */
+/*  background: url("img/domenico-loia-310197-unsplash-overlay.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0); */
+  background: url("img/photo w-overlay-white.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0);
+
+/*    background-color: rgba(77, 109, 137, 0.90); */
 }
 #masthead {
-  background: none repeat scroll 0 0 #45ac9d;
+  background: none repeat scroll 0 0 #1477d1;
 }
 #masthead nav ul li {
   float: left;
   margin: 0 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+/* #masthead nav ul li a {
+  font-family: 'Ubuntu', sans-serif;
+} */
+.page-header .top-logo .title {
+  font-family: 'Lora', serif;
+}
+/* .home-page {
+  text-align: left;
+} */
+.hero-content h1 {
+  color: #0A3B67;
+  line-height: 1.2;
+}
+ .hero-content h3 {
+  color: #0A3B67;
 }
 .button {
-	background: none repeat scroll 0 0 #45ac9d;
+	background: none repeat scroll 0 0 #1477d1;
 }
 .featured-work .site-content{
  display: block;
@@ -65,7 +87,7 @@ Text Domain:  accelerate-theme-child
 }
 .read-more-link {
   font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-	color: #45ac9d;
+	color: #1477d1;
 	text-transform: uppercase;
 }
 .twitter-widget {
@@ -85,7 +107,7 @@ Text Domain:  accelerate-theme-child
 }
 .twitter-widget .follow-us-link {
   font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-	color: #45ac9d;
+	color: #1477d1;
 	text-transform: uppercase;
 }
 .tweets {
@@ -135,7 +157,7 @@ div.case-study-images img {
 	height: auto;
 }
 .view-project {
-  color: #45ac9d;
+  color: #1477d1;
 }
 /* End Case Study Archives */
 
@@ -241,7 +263,7 @@ div.case-study-images img {
 
 /*Sidebar */
 .mc4wp-form-fields input[type="submit"] {
-  background: #45ac9d;
+  background: #1477d1;
   padding: 1em 4.3em 2em 4.3em;
 }
 /* End Sidebar */
@@ -289,7 +311,7 @@ div.case-study-images img {
   display: none;
 }
 input[type="button"] {
-  background: #45ac9d;
+  background: #1477d1;
 }
 input[type="button" i] {
   float: right;
