@@ -3,4 +3,10 @@
 wp-config.php
 .htaccess
 Wp-content/uploads
-
+wp-admin/
+wp-includes/
+wp-content/upgrade
+wp-content/plugins
+*.php
+*.txt
+*.htaccess
