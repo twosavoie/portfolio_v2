@@ -16,7 +16,7 @@ get_header(); ?>
 				$size = "full";
 				$services = get_field('services');
 				$client = get_field('client');
-				$link = get_field('site-link');
+				$link = get_field('site_link');
 				$image_1 = get_field('image_1');
 				$image_2 = get_field('image_2');
 				$image_3 = get_field('image_3'); ?>
@@ -26,10 +26,11 @@ get_header(); ?>
 						<h2><?php the_title(); ?></h2>
 						<h4><?php echo $services; ?></h4>
 						<h4>Client: <?php echo $client; ?></h4>
-
+						<!-- wrap in a if/then stmt if a link is available ? or use content box -->
+						<p class="read-more-link"><a href="<?php echo $link; ?>">Visit Live Site ›</a></p>
 						<?php the_content(); ?>
 
-						<p class="read-more-link"><a href="<?php echo $link; ?>">Visit Live Site ›</a></p>
+
 					</aside>
 
 					<div class="case-study-images">

@@ -26,10 +26,10 @@ get_header(); ?>
 <!-- maybe take away site-content & flex for mobile instead display block -->
 	<section class="featured-work">
 		<div class="site-content">
-			<h4>Featured Work</h4>
+			<h4>Case Studies</h4>
 
 			<div class="homepage-featured-work-row">
-			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?> <!-- more-->
 				<?php while ( have_posts() ) : the_post();
 					$image_1 = get_field("image_1");
 					$size = "medium";
@@ -40,6 +40,7 @@ get_header(); ?>
 					</figure>
 
 					<h3 class="individual-work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<?php the_excerpt(); ?> <!-- maybe not? -->
 				</div>
 				<?php endwhile; ?>
 			<?php wp_reset_query(); ?>

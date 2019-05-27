@@ -10,14 +10,12 @@ Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibi
 Text Domain:  accelerate-theme-child
 */
 
+/* Global styles */
+
 
 /* Homepage styles */
 .home-page {
-/*  background: url("img/domenico-loia-310197-unsplash.jpeg") no-repeat scroll  right center / cover rgba(0, 0, 0, 0); */
-/*  background: url("img/domenico-loia-310197-unsplash-overlay.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0); */
   background: url("img/photo w-overlay-white.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0);
-
-/*    background-color: rgba(77, 109, 137, 0.90); */
 }
 #masthead {
   background: none repeat scroll 0 0 #1477d1;
@@ -27,15 +25,9 @@ Text Domain:  accelerate-theme-child
   margin: 0 10px;
   font-family: 'Ubuntu', sans-serif;
 }
-/* #masthead nav ul li a {
-  font-family: 'Ubuntu', sans-serif;
-} */
 .page-header .top-logo .title {
   font-family: 'Lora', serif;
 }
-/* .home-page {
-  text-align: left;
-} */
 .hero-content h1 {
   color: #0A3B67;
   line-height: 1.2;
@@ -69,7 +61,7 @@ Text Domain:  accelerate-theme-child
   margin-top: 50px;
   display: block;
 }
-
+/* take out extra code */
 .blog-post {
     width: 45%;
     float: left;
