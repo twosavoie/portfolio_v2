@@ -56,6 +56,8 @@ Text Domain:  accelerate-theme-child
   text-align: center;
   width: 70%;
 }
+
+/* Homepage: case studies */
 .featured-work .site-content{
  display: block;
 }
@@ -67,8 +69,6 @@ Text Domain:  accelerate-theme-child
   margin-bottom: 40px;
   margin-bottom: 2.5em;
 }
-
-/* Homepage: case studies */
 .homepage-featured-work-row { /*maybe use display: block; for mobile*/
   display: flex;
   /* flex-flow: row; */
@@ -316,7 +316,7 @@ div.case-study-images img {
 /* End Footer */
 
 /*Contact page */
-.page-id-47354 .main-content {
+.page-id-47555 .main-content {
   max-width: 60%;
   margin: 0 auto;
 }
@@ -326,11 +326,19 @@ div.case-study-images img {
 .ninja-forms-req-symbol {
   display: none;
 }
-input[type="button"] {
+#nf-field-4, .ninja-forms-field .nf-element, input[type="button"] {
   background: #1477d1;
+  padding-left: 100px;
+  padding-right: 100px;
 }
+/*input[type="button"] {
+  background: #1477d1;
+}*/
 input[type="button" i] {
   float: right;
+}
+.field-wrap input[type=button] {
+  width: 200px;
 }
 .nf-field-label label {
   font-weight: 400;

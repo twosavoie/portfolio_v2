@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
-				<a class="button" href="<?php echo site_url('/case-studies/') ?>">Let's Get Started!</a>
+				<a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
@@ -37,7 +37,7 @@ get_header(); ?>
 			<p>Website design and development, Website redisign, Branding, Tech support...</p>
 
 			<div class="homepage-featured-work-row">
-			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?> <!-- more-->
+			<?php query_posts('posts_per_page=6&post_type=case_studies'); ?> <!-- more-->
 				<?php while ( have_posts() ) : the_post();
 					$image_1 = get_field("image_1");
 					$size = "medium";
@@ -54,7 +54,7 @@ get_header(); ?>
 			<?php wp_reset_query(); ?>
 		</div>
 
-		
+
 
 		</div>
 	</section>
