@@ -38,6 +38,24 @@ Text Domain:  accelerate-theme-child
 .button {
 	background: none repeat scroll 0 0 #1477d1;
 }
+
+/* Intro section */
+/* .intro-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -85px;
+  background-color: #ecf5fd;
+} */
+.intro {
+
+}
+.intro h2{
+  text-align: center;
+}
+.intro p {
+  text-align: center;
+  width: 70%;
+}
 .featured-work .site-content{
  display: block;
 }
@@ -49,19 +67,23 @@ Text Domain:  accelerate-theme-child
   margin-bottom: 40px;
   margin-bottom: 2.5em;
 }
+
+/* Homepage: case studies */
 .homepage-featured-work-row { /*maybe use display: block; for mobile*/
   display: flex;
-  flex-flow: row;
+  /* flex-flow: row; */
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 .individual-work-title { /* granular */
   text-align: center;
 }
+
+/* Homepage: Blog post - take out extra code */
 .recent-posts {
   margin-top: 50px;
   display: block;
 }
-/* take out extra code */
 .blog-post {
     width: 45%;
     float: left;
@@ -82,6 +104,8 @@ Text Domain:  accelerate-theme-child
 	color: #1477d1;
 	text-transform: uppercase;
 }
+
+/* Homepage: twitter widget */
 .twitter-widget {
   width: 45%;
   float: left;
@@ -266,12 +290,12 @@ div.case-study-images img {
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
-  background: black;
-  border-radius: 50%;
+/*  background: black;
+  border-radius: 50%; */
 }
 .social-media-menu li a {
-  color: white;
-  padding: 0 5px 0 5px;
+  color: #0A3B67;
+/*  padding: 0 5px 0 5px; */
 }
 #main {
   display: block;

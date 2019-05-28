@@ -22,11 +22,19 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
+<div class="intro-section">
+	<section class="intro">
+		<h2>Hi! I'm Lisa of LS Codes</h2>
+		<p>I love creating website that truly express your vision of your business. I spend the time to get to know what is important to you. And then process that into a website. Maybe put the story part in there too?
+		</p>
+	</section>
+</div>
 
 <!-- maybe take away site-content & flex for mobile instead display block -->
 	<section class="featured-work">
 		<div class="site-content">
 			<h4>Case Studies</h4>
+			<p>Website design and development, Website redisign, Branding, Tech support...</p>
 
 			<div class="homepage-featured-work-row">
 			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?> <!-- more-->
@@ -45,6 +53,8 @@ get_header(); ?>
 				<?php endwhile; ?>
 			<?php wp_reset_query(); ?>
 		</div>
+
+		
 
 		</div>
 	</section>

@@ -51,14 +51,14 @@
 				</ul>
 			</aside>
 
-			<aside class="widget widget_events">
+<!--			<aside class="widget widget_events">
 				<h2 class="widget-title">Events</h3>
 				<ul>
 					<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/Brooklyn.png" alt=""/></a></li>
 					<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/Rails.png" alt=""/></a></li>
 					<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/Etsy.png" alt=""/></a></li>
 				</ul>
-			</aside>
+			</aside>  -->
 		</div>
 	<?php endif; ?>
 </div>
