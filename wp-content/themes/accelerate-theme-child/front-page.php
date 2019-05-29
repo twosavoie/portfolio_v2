@@ -48,7 +48,7 @@ get_header(); ?>
 					</figure>
 
 					<h3 class="individual-work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<?php the_excerpt(); ?> <!-- maybe not? -->
+<!--					<?php the_excerpt(); ?>  maybe not? -->
 				</div>
 				<?php endwhile; ?>
 			<?php wp_reset_query(); ?>

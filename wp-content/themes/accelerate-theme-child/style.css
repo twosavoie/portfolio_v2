@@ -177,14 +177,14 @@ div.case-study-images img {
 }
 /* End Case Study Archives */
 
-/* About page */
-.about-page {
+/* Services page */
+/* .about-page {
   background: url("img/death-to-stock-nyc6.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
   height: auto;
   margin: 0 0 5em;
   padding: 8em 0;
   text-align: center;
-}
+} */
 .about-hero-content h3 {
   color: #fff;
   font-family: 'Open Sans';

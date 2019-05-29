@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the about page
+ * The template for displaying the services page
  *
  *
  * @package WordPress
@@ -29,9 +29,10 @@ get_header(); ?>
 <!-- remove permalinks if not creating single pages for posts -->
   <div id="primary" class="site-content">
 		<div class="main-content" role="main">
-      <?php query_posts('posts_per_page()&post_type=services'); ?>
+      <?php query_posts('posts_per_page()&post_type=services_offered'); ?>
 			<?php while ( have_posts() ) : the_post();
         $icon_1 = get_field("icon_1");
+
       ?>
 
       <article class="services-offered clearfix">
@@ -45,6 +46,7 @@ get_header(); ?>
         <aside class="services-offered-sidebar">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <?php the_excerpt(); ?>
+
         </aside>
 
       </article>
@@ -57,7 +59,7 @@ get_header(); ?>
 <section class="contact-link-section clearfix" >
   <div class="cta">
     <h4>Interested in working with us?</h4>
-    <a class="button" href="<?php echo site_url('/contact-us/') ?>">Contact Us</a>
+    <a class="button" href="<?php echo site_url('/contact-me/') ?>">Contact Me</a>
   </div>
 </section>
 
