@@ -60,6 +60,7 @@ Text Domain:  accelerate-theme-child
 /* Homepage: case studies */
 .featured-work .site-content{
  display: block;
+ width: 100%;
 }
 .featured-work .site-content h4 {
   font-size: 16px;
@@ -69,15 +70,26 @@ Text Domain:  accelerate-theme-child
   margin-bottom: 40px;
   margin-bottom: 2.5em;
 }
-.homepage-featured-work-row { /*maybe use display: block; for mobile*/
+
+/*.homepage-featured-work-row {
   display: flex;
-  /* flex-flow: row; */
   flex-flow: row wrap;
+  align-items: flex-end;
   justify-content: space-between;
-}
-.individual-work-title { /* granular */
   text-align: center;
 }
+.individual-featured-work {
+  width: 33%;
+  padding-bottom: 100px;
+}*/
+.homepage-featured-work-row {
+  text-align: center;
+}
+.individual-featured-work {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
 
 /* Homepage: Blog post - take out extra code */
 .recent-posts {
@@ -345,3 +357,26 @@ input[type="button" i] {
   font-size: .823em;
 }
 /* End Contact Page */
+
+/****** tablet styles *****/
+@media (min-width:768px) {
+  .homepage-featured-work-row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .individual-featured-work {
+    width: 50%;
+    padding-bottom: 100px;
+  }
+}
+
+/****** desktop styles ******/
+@media (min-width: 1025px) {
+ .individual-featured-work {
+    width: 33%;
+    padding-bottom: 100px;
+  }
+}

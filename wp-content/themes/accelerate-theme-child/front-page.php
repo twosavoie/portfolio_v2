@@ -34,17 +34,19 @@ get_header(); ?>
 	<section class="featured-work">
 		<div class="site-content">
 			<h4>Case Studies</h4>
-			<p>Website design and development, Website redisign, Branding, Tech support...</p>
+
+			<p>Website design and development, Website redesign, Branding, Tech support...</p>
 
 			<div class="homepage-featured-work-row">
 			<?php query_posts('posts_per_page=6&post_type=case_studies'); ?> <!-- more-->
 				<?php while ( have_posts() ) : the_post();
-					$image_1 = get_field("image_1");
-					$size = "medium";
+		#			$image_1 = get_field("image_1");
+					$logo = get_field("logo");
+					$size = "thumbnail";
 				?>
 				<div class="individual-featured-work">
 					<figure><a href="<?php the_permalink(); ?>">
-						<?php echo wp_get_attachment_image($image_1, $size); ?></a>
+						<?php echo wp_get_attachment_image($logo, $size); ?></a>
 					</figure>
 
 					<h3 class="individual-work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
