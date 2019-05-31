@@ -46,107 +46,52 @@ Text Domain:  accelerate-theme-child
   margin-top: -85px;
   background-color: #ecf5fd;
 } */
-.intro {
-
-}
 .intro h2{
   text-align: center;
 }
 .intro p {
   text-align: center;
   width: 70%;
+  margin-bottom: 100px;
 }
 
 /* Homepage: case studies */
 .featured-work .site-content{
  display: block;
  width: 100%;
+ margin-bottom: 70px;
 }
 .featured-work .site-content h4 {
   font-size: 16px;
   font-size: .94em;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40px;
-  margin-bottom: 2.5em;
+  margin-top: 50px;
 }
-
-/*.homepage-featured-work-row {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
-  justify-content: space-between;
+.featured-work .site-content p {
   text-align: center;
 }
-.individual-featured-work {
-  width: 33%;
-  padding-bottom: 100px;
-}*/
 .homepage-featured-work-row {
   text-align: center;
 }
 .individual-featured-work {
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
+  padding-top: 50px;
 }
 
-
-/* Homepage: Blog post - take out extra code */
-.recent-posts {
-  margin-top: 50px;
-  display: block;
+/* Homepage testimonial */
+.testimonial h4{
+  text-align: center;
 }
-.blog-post {
-    width: 45%;
-    float: left;
-    margin-bottom: 2em;
-    display: inline-block;
-}
-.blog-post h4 {
-  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-    color: #a6a6a6;
-    text-transform: uppercase;
-    margin: 2em 0 .5em;
-}
-.blog-post h2 {
-  font-size: 1.5em;
-}
-.read-more-link {
-  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-	color: #1477d1;
-	text-transform: uppercase;
+.testimonial p {
+  font-style: italic;
+  clear: both;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 70px;
 }
 
-/* Homepage: twitter widget */
-.twitter-widget {
-  width: 45%;
-  float: left;
-  margin-bottom: 2em;
-  display: inline-block;
-}
-.twitter-widget h4 {
-  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-    color: #a6a6a6;
-    text-transform: uppercase;
-    margin: 2em 0 .5em;
-}
-.twitter-widget h3 {
-  font-size: 1.5em;
-}
-.twitter-widget .follow-us-link {
-  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
-	color: #1477d1;
-	text-transform: uppercase;
-}
-.tweets {
-  margin-left: 0;
-}
-.tweets li {
-  list-style-type: none;
-}
-.stt-em a {
-  display: none;
-}
 /* End Homepage styles */
 
  /* Case Studies */
@@ -213,7 +158,7 @@ div.case-study-images img {
   text-align: center;
 }
 .about-services p {
-  width: 55%;
+  width: 70%;
 }
 .services-offered {
   margin-top: 68px;
@@ -241,7 +186,7 @@ div.case-study-images img {
   clear: both;
   margin: 0 auto;
   max-width: 75%;
-  border-top: 2px solid #ddd;
+/*  border-top: 2px solid #ddd; */
 }
 .cta {
   margin: 0 auto;
@@ -297,16 +242,26 @@ div.case-study-images img {
 /* End Sidebar */
 
 /* Footer */
+.site-footer {
+  width: 100%;
+  background-color: #0A3B67;
+  padding-bottom: 3em;
+  margin-bottom: 0;
+}
+.site-info {
+  width: 90%;
+/*  margin-left: 5em;
+ */
+  margin: 0 auto;
+}
 .social-media-menu li {
   margin-right: 10px;
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
-/*  background: black;
-  border-radius: 50%; */
 }
 .social-media-menu li a {
-  color: #0A3B67;
+  color: #ffffff;
 /*  padding: 0 5px 0 5px; */
 }
 #main {
@@ -369,7 +324,6 @@ input[type="button" i] {
   }
   .individual-featured-work {
     width: 50%;
-    padding-bottom: 100px;
   }
 }
 
@@ -377,6 +331,5 @@ input[type="button" i] {
 @media (min-width: 1025px) {
  .individual-featured-work {
     width: 33%;
-    padding-bottom: 100px;
   }
 }

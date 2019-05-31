@@ -22,8 +22,8 @@ get_header(); ?>
 
 <section class="services-list">
   <div class="about-services">
-    <h5>Our Services</h5>
-      <p>We take pride in our clients and the content we create for them. Here's a brief overview of our offered services.</p>
+    <h5>Services</h5>
+      <p>I offer the following service packages. Your project will be unique...Services are grouped into packages to give you an idea of what a project will cost. Each project is unique, customized to your vision. Following our initial interview, I can provide you with a proposed estimate which will be xxxxx after the design phase  </p>
   </div>
 
 <!-- remove permalinks if not creating single pages for posts -->
@@ -58,7 +58,7 @@ get_header(); ?>
 
 <section class="contact-link-section clearfix" >
   <div class="cta">
-    <h4>Interested in working with us?</h4>
+    <h4>Interested in working with me?</h4>
     <a class="button" href="<?php echo site_url('/contact-me/') ?>">Contact Me</a>
   </div>
 </section>

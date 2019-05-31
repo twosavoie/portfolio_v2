@@ -25,7 +25,7 @@ get_header(); ?>
 <div class="intro-section">
 	<section class="intro">
 		<h2>Hi! I'm Lisa of LS Codes</h2>
-		<p>I love creating website that truly express your vision of your business. I spend the time to get to know what is important to you. And then process that into a website. Maybe put the story part in there too?
+		<p>I love creating websites that truly express your vision. Need a static page coded with HTML & CSS? A WordPress site that you can amend at your whim? Help defining your brand? Or just a bit of assistance updating your site? I can help. Would you like to see what I can do?
 		</p>
 	</section>
 </div>
@@ -35,7 +35,7 @@ get_header(); ?>
 		<div class="site-content">
 			<h4>Case Studies</h4>
 
-			<p>Website design and development, Website redesign, Branding, Tech support...</p>
+			<p>A few examples of work I've done.</p>
 
 			<div class="homepage-featured-work-row">
 			<?php query_posts('posts_per_page=6&post_type=case_studies'); ?> <!-- more-->
@@ -43,6 +43,7 @@ get_header(); ?>
 		#			$image_1 = get_field("image_1");
 					$logo = get_field("logo");
 					$size = "thumbnail";
+					$services = get_field("services")
 				?>
 				<div class="individual-featured-work">
 					<figure><a href="<?php the_permalink(); ?>">
@@ -50,15 +51,21 @@ get_header(); ?>
 					</figure>
 
 					<h3 class="individual-work-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-<!--					<?php the_excerpt(); ?>  maybe not? -->
+					<p><?php echo $services; ?></p>
 				</div>
 				<?php endwhile; ?>
 			<?php wp_reset_query(); ?>
 		</div>
-
-
-
 		</div>
+	</section>
+
+	<section class="testimonial">
+		<h4>Gossip</h4>
+		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products or services."  <strong>Jill Machovsky</p>
+	</section>
+
+	<section class="cta">
+		<a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
 	</section>
 
 
