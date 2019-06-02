@@ -61,7 +61,7 @@ get_header(); ?>
 
 	<section class="testimonial">
 		<h4>Gossip</h4>
-		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products or services."  <strong>Jill Machovsky</p>
+		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products and services."  <strong>Jill Machovsky</p>
 	</section>
 
 	<section class="cta">

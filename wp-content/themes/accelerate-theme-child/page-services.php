@@ -32,6 +32,7 @@ get_header(); ?>
       <?php query_posts('posts_per_page()&post_type=services_offered'); ?>
 			<?php while ( have_posts() ) : the_post();
         $icon_1 = get_field("icon_1");
+				$price = get_field("price");
 
       ?>
 
@@ -45,7 +46,8 @@ get_header(); ?>
         </div>
         <aside class="services-offered-sidebar">
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php the_excerpt(); ?>
+					<h4><?php echo $price; ?></h4>
+					<?php the_excerpt(); ?>
 
         </aside>
 

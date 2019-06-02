@@ -11,7 +11,11 @@ Text Domain:  accelerate-theme-child
 */
 
 /* Global styles */
-
+p {
+   color: #3b3b3b;
+   font: 17px/1.65 'Montserrat', 'Open Sans', Arial, sans-serif;
+   margin: 1em auto;
+ }
 
 /* Homepage styles */
 .home-page {
@@ -20,6 +24,7 @@ Text Domain:  accelerate-theme-child
 #masthead {
   background: none repeat scroll 0 0 #1477d1;
 }
+/* change nav for mobile */
 #masthead nav ul li {
   float: left;
   margin: 0 10px;
@@ -46,6 +51,7 @@ Text Domain:  accelerate-theme-child
   margin-top: -85px;
   background-color: #ecf5fd;
 } */
+
 .intro h2{
   text-align: center;
 }
@@ -94,18 +100,30 @@ Text Domain:  accelerate-theme-child
 
 /* End Homepage styles */
 
+/* make responsive - display: block; ... */
+/* Seperate case study w/classes case-study-archive & case-study-single */
+/* Style change on archive - smaller picture, reconsider content */
+/* Style change on single - full case-study w/photos */
  /* Case Studies */
  article .case-study{
    margin: 40px 0 0;
  }
  article .case-study-sidebar {
    float: left;
-   width: 314px;
+   width: 50%;
    margin: 0 40px 0 0;
+ }
+
+ div .main-content p {
+   width: 100%;
+ }
+ .case-study-sidebar .read-more-link a {
+   color: #1477d1;
+   font-weight: bold;
  }
  div .case-study-images {
    float: left;
-   width: 606px;
+   width: 45%;
  }
  div .case-study-images img {
    display: block;
@@ -122,9 +140,9 @@ Text Domain:  accelerate-theme-child
   margin-top: 80px;
   margin-bottom: 80px;
 }
-.case-study-images {
+/*.case-study-images {
   padding-left: 85px;
-}
+}*/
 div.case-study-images img {
 	width: 100%;
 	height: auto;
@@ -142,6 +160,8 @@ div.case-study-images img {
   padding: 8em 0;
   text-align: center;
 } */
+
+/* make responsive */
 .about-hero-content h3 {
   color: #fff;
   font-family: 'Open Sans';
@@ -175,6 +195,12 @@ div.case-study-images img {
   width: 65%;
   float: right;
 }
+aside.services-offered-sidebar h2 {
+  margin-top: 0;
+}
+aside.services-offered-sidebar h4 {
+  margin-top: 0;
+}
 .services-offered:nth-child(even) {
   display: -webkit-flex; /* Safari */
   -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
@@ -202,6 +228,20 @@ div.case-study-images img {
   /*width: 25%;*/
   float: left;
   margin-top: 20px;
+}
+/* End Services page */
+
+/* About page */
+.main-content {
+  display: block;
+}
+about.main-content p {
+  width: 55%;
+  float: left;
+}
+.wp-block-image {
+  width: 30%;
+  float: right;
 }
 /* End About page */
 
@@ -264,6 +304,8 @@ div.case-study-images img {
   color: #ffffff;
 /*  padding: 0 5px 0 5px; */
 }
+
+/* what is this about? */
 #main {
   display: block;
 }
