@@ -21,17 +21,15 @@ get_header(); ?>
 				$image_2 = get_field('image_2');
 				$image_3 = get_field('image_3'); ?>
 
-			<article class="case-study">
-					<aside class="case-study-sidebar">
+			<article class="case-study-single">
+<!--					<aside class="case-study-sidebar"> -->
 						<h2><?php the_title(); ?></h2>
 						<h4><?php echo $services; ?></h4>
 						<h4>Client: <?php echo $client; ?></h4>
 						<!-- wrap in a if/then stmt if a link is available ? or use content box -->
 						<p class="read-more-link"><a href="<?php echo $link; ?>">Visit Live Site ›</a></p>
 						<?php the_content(); ?>
-
-
-					</aside>
+<!--					</aside> -->
 
 					<div class="case-study-images">
 						<?php if($image_1) {

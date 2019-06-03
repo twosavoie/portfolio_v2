@@ -12,10 +12,23 @@ Text Domain:  accelerate-theme-child
 
 /* Global styles */
 p {
-   color: #3b3b3b;
+/*   color: #3b3b3b; */
+  color: #4C5D6C;
    font: 17px/1.65 'Montserrat', 'Open Sans', Arial, sans-serif;
    margin: 1em auto;
  }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   color: #4C5D6C;
+ }
+ body {
+   color: #4C5D6C;
+ }
+ /* End Global styles */
 
 /* Homepage styles */
 .home-page {
@@ -41,8 +54,8 @@ p {
   color: #0A3B67;
 }
 .button {
-	background: none repeat scroll 0 0 #1477d1;
-}
+	background: none repeat scroll 0 0 #75cb00;
+} /* #1477d1 */
 
 /* Intro section */
 /* .intro-section {
@@ -85,10 +98,12 @@ p {
   padding-bottom: 30px;
   padding-top: 50px;
 }
+/* End Homepage case studies */
 
 /* Homepage testimonial */
 .testimonial h4{
   text-align: center;
+  color: #2A4E6E;
 }
 .testimonial p {
   font-style: italic;
@@ -96,23 +111,25 @@ p {
   text-align: center;
   width: 70%;
   margin-bottom: 70px;
+  color: #2A4E6E;
 }
-
+/* End Homepage testimonials */
 /* End Homepage styles */
 
 /* make responsive - display: block; ... */
 /* Seperate case study w/classes case-study-archive & case-study-single */
 /* Style change on archive - smaller picture, reconsider content */
 /* Style change on single - full case-study w/photos */
- /* Case Studies */
+
+ /* Case Studies Archive */
  article .case-study{
    margin: 40px 0 0;
  }
- article .case-study-sidebar {
+/* article .case-study-sidebar {
    float: left;
    width: 50%;
    margin: 0 40px 0 0;
- }
+ } */
 
  div .main-content p {
    width: 100%;
@@ -121,10 +138,10 @@ p {
    color: #1477d1;
    font-weight: bold;
  }
- div .case-study-images {
+/* div .case-study-images {
    float: left;
    width: 45%;
- }
+ } */
  div .case-study-images img {
    display: block;
    margin-bottom: 50px;
@@ -133,16 +150,13 @@ p {
  .main-content {
    margin-bottom: 80px;
  }
- /* End Case Studies */
+ /* End Case Studies Archive */
 
-/* Case Study Archive */
+/* Case Study Singles */
 .case-study {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-/*.case-study-images {
-  padding-left: 85px;
-}*/
 div.case-study-images img {
 	width: 100%;
 	height: auto;
@@ -150,9 +164,17 @@ div.case-study-images img {
 .view-project {
   color: #1477d1;
 }
-/* End Case Study Archives */
+/* takes out sm follows from plugin in case-studies */
+.case-study-single .sfsi_Sicons span {
+  display: none;
+}
+ .case-study-single .sfsi_Sicons .sfsi_socialwpr {
+  display: none;
+}
+/* End Case Study Singles */
 
 /* Services page */
+
 /* .about-page {
   background: url("img/death-to-stock-nyc6.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
   height: auto;
@@ -161,7 +183,6 @@ div.case-study-images img {
   text-align: center;
 } */
 
-/* make responsive */
 .about-hero-content h3 {
   color: #fff;
   font-family: 'Open Sans';
@@ -170,15 +191,10 @@ div.case-study-images img {
   max-width: 42%;
   margin: 0 auto;
 }
-.services-list {
-  max-width: 76%;
-  margin: 0 auto;
-}
 .about-services {
   text-align: center;
-}
-.about-services p {
-  width: 70%;
+  width: 90%;
+  margin: 0 auto;
 }
 .services-offered {
   margin-top: 68px;
@@ -186,47 +202,33 @@ div.case-study-images img {
   justify-content: space-between;
 }
 .services-offered-images {
-  float: left;
-}
-.services-offered-images a img {
-  width: 216px;
-}
-.services-offered-sidebar {
-  width: 65%;
-  float: right;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
 aside.services-offered-sidebar h2 {
+  clear: both;
   margin-top: 0;
 }
 aside.services-offered-sidebar h4 {
   margin-top: 0;
 }
-.services-offered:nth-child(even) {
-  display: -webkit-flex; /* Safari */
-  -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
 .contact-link-section {
+  display: block;
   clear: both;
   margin: 0 auto;
-  max-width: 75%;
+  text-align: center;
 /*  border-top: 2px solid #ddd; */
 }
 .cta {
+/*  clear: both; */
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
 .cta h4 {
-  float: left;
-  width: 35%;
   text-transform: none;
+  margin-bottom: 20px;
 }
 .cta a {
-  /*width: 25%;*/
-  float: left;
   margin-top: 20px;
 }
 /* End Services page */
@@ -336,7 +338,7 @@ about.main-content p {
   display: none;
 }
 #nf-field-4, .ninja-forms-field .nf-element, input[type="button"] {
-  background: #1477d1;
+  background: #75cb00;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -355,8 +357,15 @@ input[type="button" i] {
 }
 /* End Contact Page */
 
+/* Blog styles */
+.entry-time {
+  color: #75cb00;
+}
+/* End Blog styles */
+
 /****** tablet styles *****/
 @media (min-width:768px) {
+  /* Homepage tablet */
   .homepage-featured-work-row {
     display: flex;
     flex-flow: row wrap;
@@ -364,9 +373,29 @@ input[type="button" i] {
     justify-content: space-between;
     text-align: center;
   }
+  /* End Homepage tablet */
+  /* Case Study tablet */
   .individual-featured-work {
     width: 50%;
   }
+  article .case-study-sidebar {
+    float: left;
+    width: 50%;
+    margin: 0 40px 0 0;
+  }
+  div .case-study-images {
+     float: left;
+     width: 45%;
+   }
+   /* End Case Study tablet */
+   .services-offered-images {
+     width: 20%;
+     margin: 0 auto;
+   }
+   .services-offered-images a img {
+     margin: 0 auto;
+     width: 216px;
+   }
 }
 
 /****** desktop styles ******/
@@ -374,4 +403,51 @@ input[type="button" i] {
  .individual-featured-work {
     width: 33%;
   }
+  /* Services desktop */
+  .services-list {
+    max-width: 76%;
+    margin: 0 auto;
+  }
+  .about-services p {
+    width: 70%;
+  }
+  .services-offered {
+    margin-top: 68px;
+    margin-bottom: 68px;
+    justify-content: space-between;
+  }
+  .services-offered-images {
+    display: flex;
+    width: 35%;
+    float: left;
+  }
+  .services-offered-images a img {
+    width: 216px;
+  }
+  .services-offered-sidebar {
+    width: 65%;
+    float: right;
+  }
+  .services-offered:nth-child(even) {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .contact-link-section {
+    max-width: 75%;
+  /*  border-top: 2px solid #ddd; */
+  }
+  .cta {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .cta h4 {
+    float: left;
+    width: 35%;
+    text-transform: none;
+  }
+  /* End Services desktop */
 }
