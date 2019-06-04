@@ -61,7 +61,7 @@ get_header(); ?>
 <section class="contact-link-section clearfix" >
   <div class="cta">
     <h4>Interested in working with me?</h4>
-    <a class="button" href="<?php echo site_url('/contact-me/') ?>">Contact Me</a>
+    <a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
   </div>
 </section>
 

@@ -114,10 +114,13 @@ p {
   color: #2A4E6E;
 }
 /* End Homepage testimonials */
-/* End Homepage styles */
 
-/* make responsive - display: block; ... */
-/* Seperate case study w/classes case-study-archive & case-study-single */
+/* Homepage CTA */
+.cta {
+  text-align: center;
+}
+
+/* End Homepage styles */
 /* Style change on archive - smaller picture, reconsider content */
 /* Style change on single - full case-study w/photos */
 
@@ -125,12 +128,6 @@ p {
  article .case-study{
    margin: 40px 0 0;
  }
-/* article .case-study-sidebar {
-   float: left;
-   width: 50%;
-   margin: 0 40px 0 0;
- } */
-
  div .main-content p {
    width: 100%;
  }
@@ -138,10 +135,6 @@ p {
    color: #1477d1;
    font-weight: bold;
  }
-/* div .case-study-images {
-   float: left;
-   width: 45%;
- } */
  div .case-study-images img {
    display: block;
    margin-bottom: 50px;
@@ -174,7 +167,6 @@ div.case-study-images img {
 /* End Case Study Singles */
 
 /* Services page */
-
 /* .about-page {
   background: url("img/death-to-stock-nyc6.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
   height: auto;
@@ -182,7 +174,6 @@ div.case-study-images img {
   padding: 8em 0;
   text-align: center;
 } */
-
 .about-hero-content h3 {
   color: #fff;
   font-family: 'Open Sans';
@@ -221,15 +212,12 @@ aside.services-offered-sidebar h4 {
 /*  border-top: 2px solid #ddd; */
 }
 .cta {
-/*  clear: both; */
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 .cta h4 {
   text-transform: none;
   margin-bottom: 20px;
-}
-.cta a {
-  margin-top: 20px;
 }
 /* End Services page */
 
@@ -328,7 +316,7 @@ about.main-content p {
 
 /*Contact page */
 .page-id-47555 .main-content {
-  max-width: 60%;
+  max-width: 90%;
   margin: 0 auto;
 }
 .nf-before-form-content {
@@ -345,6 +333,11 @@ about.main-content p {
 /*input[type="button"] {
   background: #1477d1;
 }*/
+#nf-field-4 {
+  display: block;
+  margin: 0 auto !important;
+  float: none !important;
+}
 input[type="button" i] {
   float: right;
 }
@@ -396,6 +389,18 @@ input[type="button" i] {
      margin: 0 auto;
      width: 216px;
    }
+   /* Contact form tablet */
+   .page-id-47555 .main-content {
+     max-width: 60%;
+     margin: 0 auto;
+   }
+   #nf-field-4 {
+     float: right !important;
+   }
+   input[type="button" i] {
+     float: right;
+   }
+   /* End Contact form tablet */
 }
 
 /****** desktop styles ******/
@@ -438,16 +443,5 @@ input[type="button" i] {
   .contact-link-section {
     max-width: 75%;
   /*  border-top: 2px solid #ddd; */
-  }
-  .cta {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .cta h4 {
-    float: left;
-    width: 35%;
-    text-transform: none;
-  }
   /* End Services desktop */
 }
