@@ -359,6 +359,10 @@ input[type="button" i] {
 /****** tablet styles *****/
 @media (min-width:768px) {
   /* Homepage tablet */
+  #masthead {
+    width: 100%;
+    position: fixed;
+  }
   .homepage-featured-work-row {
     display: flex;
     flex-flow: row wrap;
