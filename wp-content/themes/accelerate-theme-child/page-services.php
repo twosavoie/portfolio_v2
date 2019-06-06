@@ -22,8 +22,9 @@ get_header(); ?>
 
 <section class="services-list">
   <div class="about-services">
-    <h5>Services</h5>
-      <p>I offer the following service packages. Your project will be unique...Services are grouped into packages to give you an idea of what a project will cost. Each project is unique, customized to your vision. Following our initial interview, I can provide you with a proposed estimate which will be xxxxx after the design phase  </p>
+    <h5>Service Packages</h5>
+      <p>Packages can give you an idea of what a project can cost. However, each project is unique and customized for you. Following our initial interview, I'll provide you with an estimate which will be refined into a bid after the design phase.</p>
+			<p>All the websites I build are designed to look great on every screen size. I rigorously test each site so you can be confident that every link works and the styling is right on multiple browsers. All prices do not include the purchase of themes or plugins you might want.</p>
   </div>
 
 <!-- remove permalinks if not creating single pages for posts -->
@@ -38,16 +39,19 @@ get_header(); ?>
 
       <article class="services-offered clearfix">
         <div class="services-offered-images">
-          <a href="<?php the_permalink(); ?>">
+<!--          <a href="<?php the_permalink(); ?>"> -->
             <?php if($icon_1) {
               echo wp_get_attachment_image( $icon_1 );
             } ?>
           </a>
         </div>
         <aside class="services-offered-sidebar">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <h2>
+<!--						<a href="<?php the_permalink(); ?>"> -->
+					<?php the_title(); ?></a></h2>
 					<h4><?php echo $price; ?></h4>
-					<?php the_excerpt(); ?>
+<!--					<?php the_excerpt(); ?> -->
+					<?php the_content(); ?>
 
         </aside>
 

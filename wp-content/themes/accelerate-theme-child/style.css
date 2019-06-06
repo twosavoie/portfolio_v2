@@ -28,11 +28,15 @@ p {
  body {
    color: #4C5D6C;
  }
+ .page-main-content, .main-content a:hover {
+   background-color: rgba(22, 132, 232, 0.2);
+   font-weight: bold;
+ }
  /* End Global styles */
 
 /* Homepage styles */
 .home-page {
-  background: url("img/photo w-overlay-white.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0);
+  background: url("img/domenico-loia-310197-unsplash-white-overlay.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0);
 }
 #masthead {
   background: none repeat scroll 0 0 #1477d1;
@@ -56,15 +60,6 @@ p {
 .button {
 	background: none repeat scroll 0 0 #75cb00;
 } /* #1477d1 */
-
-/* Intro section */
-/* .intro-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  margin-top: -85px;
-  background-color: #ecf5fd;
-} */
-
 .intro h2{
   text-align: center;
 }
@@ -79,6 +74,9 @@ p {
  display: block;
  width: 100%;
  margin-bottom: 70px;
+}
+.individual-featured-work:hover {
+  background-color: #f8f8f8;
 }
 .featured-work .site-content h4 {
   font-size: 16px;
@@ -125,20 +123,25 @@ p {
 /* Style change on single - full case-study w/photos */
 
  /* Case Studies Archive */
- article .case-study{
-   margin: 40px 0 0;
+ .case-study-archive {
+/*   margin: 40px 0 0; */
+   padding-bottom: 80px;
+/*   border-bottom: 1px solid #dddddd; */
  }
  div .main-content p {
    width: 100%;
+ }
+ .case-study-archive h5 {
+   margin-top: 10px;
  }
  .case-study-sidebar .read-more-link a {
    color: #1477d1;
    font-weight: bold;
  }
- div .case-study-images img {
+ div .case-study-images-archive img {
    display: block;
-   margin-bottom: 50px;
    border: 1px solid #dddddd;
+   margin-top: 42.5px;
  }
  .main-content {
    margin-bottom: 80px;
@@ -150,12 +153,29 @@ p {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-div.case-study-images img {
+.case-study-single h4{
+  margin-top: 10px;
+}
+.testimonial {
+  font-style: italic;
+  color: #2A4E6E;
+}
+div.case-study-images-single img {
 	width: 100%;
 	height: auto;
+  border: 1px solid #dddddd;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 .view-project {
   color: #1477d1;
+}
+.case-study-single a {
+  text-decoration: underline;
+}
+.case-study-single a:hover {
+  background-color: rgba(22, 132, 232, 0.2);
+  font-weight: bold;
 }
 /* takes out sm follows from plugin in case-studies */
 .case-study-single .sfsi_Sicons span {
@@ -182,6 +202,9 @@ div.case-study-images img {
   max-width: 42%;
   margin: 0 auto;
 }
+.services-list .main-content {
+  margin-top: 0;
+}
 .about-services {
   text-align: center;
   width: 90%;
@@ -203,6 +226,9 @@ aside.services-offered-sidebar h2 {
 }
 aside.services-offered-sidebar h4 {
   margin-top: 0;
+}
+div .main-content {
+  margin-bottom: 0;
 }
 .contact-link-section {
   display: block;
@@ -232,6 +258,9 @@ about.main-content p {
 .wp-block-image {
   width: 30%;
   float: right;
+}
+ .page-main-content {
+  margin-bottom: 80px;
 }
 /* End About page */
 
@@ -359,9 +388,12 @@ input[type="button" i] {
 /****** tablet styles *****/
 @media (min-width:768px) {
   /* Homepage tablet */
-  #masthead {
+ #masthead {
     width: 100%;
     position: fixed;
+  }
+  .main-content {
+    margin-top: 100px;
   }
   .homepage-featured-work-row {
     display: flex;
@@ -377,14 +409,15 @@ input[type="button" i] {
   }
   article .case-study-sidebar {
     float: left;
-    width: 50%;
-    margin: 0 40px 0 0;
+    width: 45%;
+    margin: 0 80px 0 0;
   }
-  div .case-study-images {
+  div .case-study-images-archive {
      float: left;
      width: 45%;
    }
    /* End Case Study tablet */
+   /* Services tablet */
    .services-offered-images {
      width: 20%;
      margin: 0 auto;
@@ -393,8 +426,13 @@ input[type="button" i] {
      margin: 0 auto;
      width: 216px;
    }
+   /* End Services tablet */
    /* Contact form tablet */
    .page-id-47555 .main-content {
+     max-width: 60%;
+     margin: 0 auto;
+   }
+   .page-id-47555 .site-content {
      max-width: 60%;
      margin: 0 auto;
    }
@@ -405,6 +443,11 @@ input[type="button" i] {
      float: right;
    }
    /* End Contact form tablet */
+   /* About tablet */
+   .page-main-content {
+     margin-top: 100px;
+   }
+   /* End About tablet */
 }
 
 /****** desktop styles ******/
@@ -418,7 +461,7 @@ input[type="button" i] {
     margin: 0 auto;
   }
   .about-services p {
-    width: 70%;
+    width: 90%;
   }
   .services-offered {
     margin-top: 68px;
@@ -437,13 +480,13 @@ input[type="button" i] {
     width: 65%;
     float: right;
   }
-  .services-offered:nth-child(even) {
+/*  .services-offered:nth-child(even) {
     display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
-    display: flex;
+/*    -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+/*    display: flex;
     flex-direction: row-reverse;
     align-items: center;
-  }
+  } */
   .contact-link-section {
     max-width: 75%;
   /*  border-top: 2px solid #ddd; */

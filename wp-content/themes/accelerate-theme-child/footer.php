@@ -16,7 +16,8 @@
 			<div class="site-info">
 				<div class="site-description">
 					<p><?php bloginfo('description'); ?></p>
-					<p>&copy; <?php bloginfo('title'); ?>, LLC
+					<p>&copy; <?php bloginfo('title'); ?>, LLC</p>
+					<p>Thanks to Domenico Loia for the beautiful photograph found on Unsplash!<br><a href="https://unsplash.com/@domenicoloia/portfolio"<span>Domenico's Instagram</span></p>
 				</div>
 
 				<nav class="social-media-navigation" role="navigation">

@@ -35,7 +35,7 @@ get_header(); ?>
 		<div class="site-content">
 			<h4>Case Studies</h4>
 
-			<p>A few examples of work I've done.</p>
+			<p>A few examples of work I've done. Please click on any project to learn more.</p>
 
 			<div class="homepage-featured-work-row">
 			<?php query_posts('posts_per_page=6&post_type=case_studies'); ?> <!-- more-->
@@ -61,7 +61,7 @@ get_header(); ?>
 
 	<section class="testimonial">
 		<h4>Gossip</h4>
-		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products and services."  <strong>Jill Machovsky</p>
+		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products and services." -  <strong>Jill Machovsky</p>
 	</section>
 
 	<section class="homepage-cta cta">
