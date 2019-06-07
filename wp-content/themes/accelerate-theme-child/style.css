@@ -385,6 +385,11 @@ input[type="button" i] {
 /* End Contact Page */
 
 /* Blog styles */
+/* does this work properly in mobile? */
+.blog {
+  display: block;
+  width: 100%;
+}
 .entry-time {
   color: #75cb00;
 }
