@@ -22,10 +22,14 @@ get_header(); ?>
 
 <section class="services-list">
   <div class="about-services">
-    <h5>Service Packages</h5>
-      <p>Packages can give you an idea of what a project can cost. However, each project is unique and customized for you. Following our initial interview, I'll provide you with an estimate which will be refined into a bid after the design phase.</p>
-			<p>All the websites I build are designed to look great on every screen size. I rigorously test each site so you can be confident that every link works and the styling is right on multiple browsers. All prices do not include the purchase of themes or plugins you might want.</p>
-  </div>
+		<h5>I became a freelance developer because I love creating websites truly suited to my clients priorities.</h5>
+			<div class="half-width">
+      	<p class="left-side">I know that putting your business in the hands of a developer is stressful. Will they understand what is important to you? Be respectful of your budget? Leave you confused with jargon?</p>
+			</div>
+			<div class="half-width">
+				<p>I am a Service-First developer. I spend the time getting to know you, your needs, and your competition. I focus on how your website can draw attention to what makes you unique.</p>
+			</div>
+  	</div>
 
 <!-- remove permalinks if not creating single pages for posts -->
   <div id="primary" class="site-content">
@@ -60,6 +64,12 @@ get_header(); ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
 
+</section>
+
+<section class="services-list">
+	<div class="about-services">
+		<p></p>
+	</div>
 </section>
 
 <section class="contact-link-section clearfix" >

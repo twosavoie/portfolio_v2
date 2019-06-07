@@ -227,6 +227,7 @@ div.case-study-images-single img {
 aside.services-offered-sidebar h2 {
   clear: both;
   margin-top: 0;
+  line-height: 1.2em;
 }
 aside.services-offered-sidebar h4 {
   margin-top: 0;
@@ -422,6 +423,22 @@ input[type="button" i] {
    }
    /* End Case Study tablet */
    /* Services tablet */
+   .about-services {
+     width: 90%;
+   }
+   .about-services h5 {
+     width: 70%;
+     text-align: center;
+     margin: 0 auto;
+   }
+   .half-width {
+     width: 50%;
+     float: left;
+     text-align: left;
+   }
+   .left-side {
+     margin-right: 30px;
+   }
    .services-offered-images {
      width: 20%;
      margin: 0 auto;
@@ -464,9 +481,9 @@ input[type="button" i] {
     max-width: 76%;
     margin: 0 auto;
   }
-  .about-services p {
+/*  .about-services p {
     width: 90%;
-  }
+  } */
   .services-offered {
     margin-top: 68px;
     margin-bottom: 68px;
