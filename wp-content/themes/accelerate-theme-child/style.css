@@ -390,6 +390,9 @@ input[type="button" i] {
   display: block;
   width: 100%;
 }
+.entry-title a {
+  color: #0A3B67;
+}
 .entry-time {
   color: #75cb00;
 }
