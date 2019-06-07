@@ -20,7 +20,7 @@
 				<div class="textwidget">
 					<p>Enjoy my blog!</p>
 				</div>
-			</aside>
+			</aside> 
 
 			<aside class="widget widget_search">
 				<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -29,7 +29,7 @@
 				</form>
 			</aside>
 
-			<aside class="widget widget_categories">
+<!--			<aside class="widget widget_categories">
 				<h2 class="widget-title">Categories</h2>
 				<ul>
 					<li><a href="">Books </a></li>
@@ -38,9 +38,9 @@
 					<li><a href="">Videos</a></li>
 					<li><a href="">Quotes</a></li>
 				</ul>
-			</aside>
+			</aside> -->
 
-			<aside class="widget widget_archive">
+<!--			<aside class="widget widget_archive">
 				<h2 class="widget-title">Archives</h2>
 				<ul>
 					<li><a href="">September 2014</a></li>
@@ -49,7 +49,7 @@
 					<li><a href="">June 2014</a></li>
 					<li><a href="">May 2014</a></li>
 				</ul>
-			</aside>
+			</aside> -->
 
 <!--			<aside class="widget widget_events">
 				<h2 class="widget-title">Events</h3>
