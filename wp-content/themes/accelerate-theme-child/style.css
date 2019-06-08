@@ -59,6 +59,8 @@ p {
 /* Homepage styles */
 .home-page {
   background: url("img/domenico-loia-310197-unsplash-white-overlay.png") no-repeat scroll  right center / cover rgba(0, 0, 0, 0);
+/*  margin-top: 59px; */
+  padding-top: 200px;
 }
 #masthead {
   background: none repeat scroll 0 0 #1477d1;
@@ -435,7 +437,10 @@ input[type="button" i] {
 /****** tablet styles *****/
 @media (min-width:768px) {
   /* Homepage tablet */
- #masthead {
+  .home-page {
+    margin-top: 59px;
+  }
+  #masthead {
     width: 100%;
     position: fixed;
   }
