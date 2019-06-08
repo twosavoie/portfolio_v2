@@ -23,17 +23,35 @@ p {
  h4,
  h5,
  h6 {
-   color: #4C5D6C;
+   color: #0A3B67;
  }
  body {
    color: #4C5D6C;
  }
- .main-content a:hover {
-   background-color: rgba(22, 132, 232, 0.2);
+ .page-header .primary-navigation ul li:hover > a{
+   font-family: 'Lora', serif;
    font-weight: bold;
  }
+ .main-content a {
+   font-weight: bold;
+ }
+ .page-main-content a {
+   font-weight: bold;
+ }
+ .main-content a:hover {
+   font-weight: bold;
+   text-decoration: underline;
+ }
  .page-main-content a:hover {
-   background-color: rgba(22, 132, 232, 0.2);
+   font-weight: bold;
+   text-decoration: underline;
+ }
+ .main-content-header a:hover {
+   background-color: #1477D1;
+   font-weight: bold;
+ }
+ .cta a:hover {
+   background-color: #1477D1;
    font-weight: bold;
  }
  /* End Global styles */
@@ -53,6 +71,9 @@ p {
 }
 .page-header .top-logo .title {
   font-family: 'Lora', serif;
+}
+.page-header .top-logo .title:hover {
+  font-family: 'Ubuntu', sans-serif;
 }
 .hero-content h1 {
   color: #0A3B67;
@@ -174,12 +195,10 @@ div.case-study-images-single img {
 .view-project {
   color: #1477d1;
 }
-.case-study-single a {
-  text-decoration: underline;
-}
+
 .case-study-single a:hover {
-  background-color: rgba(22, 132, 232, 0.2);
   font-weight: bold;
+  text-decoration: underline;
 }
 /* takes out sm follows from plugin in case-studies */
 .case-study-single .sfsi_Sicons span {
@@ -198,14 +217,14 @@ div.case-study-images-single img {
   padding: 8em 0;
   text-align: center;
 } */
-.about-hero-content h3 {
+/* .about-hero-content h3 {
   color: #fff;
   font-family: 'Open Sans';
   font-size: 1.4em;
   font-weight: normal;
   max-width: 42%;
   margin: 0 auto;
-}
+} */
 .services-list .main-content {
   margin-top: 0;
 }
@@ -364,9 +383,11 @@ about.main-content p {
   padding-left: 100px;
   padding-right: 100px;
 }
-/*input[type="button"] {
-  background: #1477d1;
-}*/
+ #nf-field-4:hover {
+  background-color: #1477D1;
+  font-weight: bold;
+  color: white;
+}
 #nf-field-4 {
   display: block;
   margin: 0 auto !important;
@@ -396,6 +417,19 @@ input[type="button" i] {
 .entry-time {
   color: #75cb00;
 }
+#s:focus {
+  outline: none;
+}
+.entry-footer .entry-terms a:hover {
+  text-decoration: none;
+}
+.wp-block-file .wp-block-file__button {
+  background: #75cb00;
+}
+.wp-block-file .wp-block-file__button:hover {
+  background: #1477D1;
+}
+
 /* End Blog styles */
 
 /****** tablet styles *****/

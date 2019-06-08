@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary" class="home-page hero-content">
-		<div class="main-content" role="main">
+		<div class="main-content-header" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
 				<a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
@@ -65,7 +65,9 @@ get_header(); ?>
 	</section>
 
 	<section class="homepage-cta cta">
-		<a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
+		<div class="cta-blue">
+			<a class="button" href="<?php echo site_url('/contact-me/') ?>">Let's Get Started!</a>
+		</div>
 	</section>
 
 
