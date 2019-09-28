@@ -38,7 +38,7 @@ get_header(); ?>
 			<p>A few examples of work I've done. Please click on any project to learn more.</p>
 
 			<div class="homepage-featured-work-row">
-			<?php query_posts('posts_per_page=6&post_type=case_studies'); ?> <!-- more-->
+			<?php query_posts('posts_per_page=9&post_type=case_studies'); ?> <!-- more-->
 				<?php while ( have_posts() ) : the_post();
 		#			$image_1 = get_field("image_1");
 					$logo = get_field("logo");
@@ -61,7 +61,7 @@ get_header(); ?>
 
 	<section class="testimonial">
 		<h4>Said about me</h4>
-		<p>"I have truly enjoyed working with Lisa.  She is a great listener and really works to figure out what the customer is visualizing.  She is quick to respond, communicates well, and understands how to put a beautiful website together that will draw attention to your products and services." -  <strong>Jill Machovsky</strong></p>
+		<p>"Lisa Savoie constructed our non-profit's website, managed the launch, and provided documentation/training to ensure that my staff is equipped to maintain the website long-term. Throughout this process, Lisa exceeded our expectations. She is knowledgeable, yet also capable of communicating clearly with non-technical staff. She works efficiently; this project was completed well ahead of our anticipated launch date. She communicates clearly and regularly. Importantly, her work product is extremely high quality. But, perhaps even more importantly, the process itself was seamless and dare I say it... enjoyable!" -  <strong>Heather Finnegan, Executive Director, The Community's Foundation</strong></p>
 	</section>
 
 	<section class="homepage-cta cta">
