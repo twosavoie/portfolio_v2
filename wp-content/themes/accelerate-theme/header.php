@@ -11,6 +11,7 @@
 ?>
 <!DOCTYPE html>
 <head>
+		<html lang="en">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141671542-1"></script>
 		<script>
